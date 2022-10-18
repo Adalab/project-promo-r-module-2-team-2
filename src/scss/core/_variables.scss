@@ -1,0 +1,7 @@
+$colorText: purple;
+
+@mixin title ($color) {
+    text-transform: uppercase;
+    text-align: center;
+    color: $color;
+}

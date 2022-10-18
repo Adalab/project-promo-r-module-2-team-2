@@ -1,0 +1,10 @@
+.header{
+  background-color: aqua;
+  &__title{
+    @include title(purple);
+    &--second{
+      @include title(white);
+    }
+  }
+
+}
