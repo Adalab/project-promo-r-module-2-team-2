@@ -1,7 +1,13 @@
-$colorText: purple;
+$black: #000000;
+$dark-green-blue: #114e4e;
+$dirty-blue: #438792;
+$hospital-green: #a2deaf;
+$light-khaki: #f9f4dc;
+$white: #ffffff;
+$dull-orange: #e17334;
 
-@mixin title ($color) {
-    text-transform: uppercase;
-    text-align: center;
-    color: $color;
+@mixin title($color) {
+  text-transform: uppercase;
+  text-align: center;
+  color: $color;
 }

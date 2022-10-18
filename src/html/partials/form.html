@@ -1,0 +1,129 @@
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1"
+    />
+    <title>Adalab Web Starter Kit</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="./assets/css/main.css"
+    />
+    <!-- <link rel="icon" href="./assets/images/favicon.png" /> -->
+  </head>
+
+  <body>
+    <form
+      action="https://adalab-server-form.herokuapp.com/"
+      method="post"
+    >
+      <div class="form">
+        <div class="form__contact">
+          <label
+            class="form__contact--label"
+            for="text"
+            >Nombre completo</label
+          >
+          <input
+            class="form__contact--input"
+            type="text"
+            id="text"
+            name="text"
+            placeholder="Ej:Saily Jill"
+            required
+          />
+        </div>
+        <div class="form__contact">
+          <label
+            class="form__contact--label"
+            for="text"
+            >Puesto
+          </label>
+          <input
+            class="form__contact--input"
+            type="text"
+            id="text"
+            name="text"
+            placeholder="Ej: Front-end unicorn"
+            required
+          />
+        </div>
+        <div class="form__contact">
+          <span>imagen de perfil</span>
+          <button class="form__contact--btn">Añadir imagen</button>
+        </div>
+        <div class="form__contact">
+          <label
+            class="form__contact--label"
+            for="email"
+            >Email
+          </label>
+          <input
+            class="form__contact--input"
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Ej:linkedin.com/in/sally.hill"
+            required
+          />
+        </div>
+        <div class="form__contact">
+          <label
+            class="form__contact--label"
+            for="tel"
+          >
+            Teléfono</label
+          >
+          <input
+            class="form__contact--input"
+            type="tel"
+            id="tel"
+            name="tel"
+            pattern="^[0-9]{9}$"
+            placeholder="Ej: 555-55-55-55"
+            required
+          />
+        </div>
+        <div class="form__contact">
+          <label
+            class="form__contact--label"
+            for="text"
+          >
+            Linkedin</label
+          >
+          <input
+            class="form__contact--input"
+            type="text"
+            id="text"
+            name="text"
+            placeholder="Ej: ej:linkedin.com/in/sally.hill"
+            required
+          />
+        </div>
+        <div class="form__contact">
+          <label
+            class="form__contact--label"
+            for="text"
+          >
+            Github</label
+          >
+          <input
+            class="form__contact--input"
+            type="text"
+            id="text"
+            name="text"
+            placeholder="Ej:sally.hill"
+            required
+          />
+        </div>
+      </div>
+    </form>
+
+    <script src="./assets/js/main.js"></script>
+  </body>
+</html>
