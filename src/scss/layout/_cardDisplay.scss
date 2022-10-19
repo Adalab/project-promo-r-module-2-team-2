@@ -1,6 +1,6 @@
 .cardDisplay {
     background: linear-gradient(#bfcdd0, #dde9ed);   
-    padding:38px 35px 0px 45px;
+    padding:38px 35px 40px 45px;
     &__reset {
         text-decoration: none;
         background-color: transparent;
@@ -10,7 +10,6 @@
         border-radius: 15px;
         width: 75px;
         height: 30px;
-        font-family: 'Open Sans';
         text-transform: uppercase;
         display:flex;
         align-items: center;
@@ -29,7 +28,7 @@
         /*shadow : pxX pxY  blur color/opacidad20% */
         box-shadow: 0 1px 10px  rgba(0, 0, 0, 0.20);
         &--name {
-            color: $colorNameCard;
+            color: $colorSubtitle;
             @include t(rem(18),rem(20));
             //
         /*     font-size: rem(18);
@@ -49,15 +48,13 @@
             width: 240px;
             height: 200px;
             transform: translate(-40px);
-            /* display: flex;
-            justify-content: center;
-            align-items: center; */
              }
+             //pendiente márgenes de los los botonos!
         &--iconList {
             display:flex;
             /* text-decoration: none; */
             gap:10px;
-            margin-top: 10px;
+            margin: 10px 10px 0 0px;
             font-size: 18px;
             list-style: none;
         }
@@ -68,14 +65,14 @@
         height: 100%;
     }
 .cardListElement__icon {
-        border: solid 2px #a2deaf;
+        border: solid 2px $colorBorder;
         border-radius:16px;
         padding:7px 7px;
         display: flex;
         text-decoration: none;
         justify-content: center;
         align-items: center;
-        color: $colorNameCard;
+        color: $colorSubtitle;
     }
     .cardListElement{
         text-decoration: none;
