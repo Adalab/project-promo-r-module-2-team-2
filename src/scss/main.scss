@@ -2,7 +2,8 @@
 @import "./layout/headerCreate";
 @import "./layout/cardDisplay";
 @import "./layout/formFill";
-
+@import "./pages/index";
+@import "./layout/footer";
 :root {
     font-family: $font-familyPrimary;
 }
