@@ -1,0 +1,12 @@
+.profileHeader {
+  padding-top:31px;
+  padding-bottom: 30px;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  background-color:$colorWhite;
+  &__img{
+    height:50px;
+    width: 201px;
+  }
+}

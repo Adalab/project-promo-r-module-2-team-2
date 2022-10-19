@@ -1,0 +1,81 @@
+.cardDisplay {
+    background: linear-gradient(#bfcdd0, #dde9ed);   
+    padding:38px 35px 0px 45px;
+    &__reset {
+        text-decoration: none;
+        background-color: transparent;
+        margin-bottom: 20px;
+        /* padding:4px 12px 6px 29px; */
+        border:solid 1px $colorWhite;
+        border-radius: 15px;
+        width: 75px;
+        height: 30px;
+        font-family: 'Open Sans';
+        text-transform: uppercase;
+        display:flex;
+        align-items: center;
+        gap:8px;
+        color:$colorGreyText;
+        }
+    &__card {
+        background-color:$colorWhite;;
+        width: 240px;
+       /*  height: 329px; */
+        padding-top: 21px;
+        padding-bottom: 12px;
+        display: flex;
+        flex-direction: column;
+        border-radius: 2px;
+        /*shadow : pxX pxY  blur color/opacidad20% */
+        box-shadow: 0 1px 10px  rgba(0, 0, 0, 0.20);
+        &--name {
+            color: $colorNameCard;
+            font-size: 18px;
+            line-height: 20px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            padding-left: 20px;
+            }
+        &--profesion {
+                color: $colorGreyText;
+                font-size: 16px;
+                line-height: 20px;
+                font-family: 'Montserrat', sans-serif;
+                padding-left: 20px;
+                }
+        &--photo {
+            width: 240px;
+            height: 200px;
+            transform: translate(-40px);
+            /* display: flex;
+            justify-content: center;
+            align-items: center; */
+             }
+        &--iconList {
+            display:flex;
+            /* text-decoration: none; */
+            gap:10px;
+            margin-top: 10px;
+            font-size: 18px;
+            list-style: none;
+        }
+    }
+}
+    .photo {
+        width: 100%;
+        height: 100%;
+    }
+.cardListElement__icon {
+        border: solid 2px #a2deaf;
+        border-radius:16px;
+        padding:7px 7px;
+        display: flex;
+        text-decoration: none;
+        justify-content: center;
+        align-items: center;
+        color: $colorNameCard;
+    }
+    .cardListElement{
+        text-decoration: none;
+        
+    }
