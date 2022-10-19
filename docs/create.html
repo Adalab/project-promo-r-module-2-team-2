@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Adalab Web Starter Kit</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:wght@900&family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./assets/css/main.css" />
+    <!-- <link rel="icon" href="./assets/images/favicon.png" /> -->
+  </head>
+
+  <body>
+    <header class="headerCreate">
+      <img
+        class="headerCreate__img"
+        src="./assets/images/logo-awesome-profile-cards.svg"
+        alt="logo Awesome profile cards"
+        title="logo Awesome profile cards"
+      />
+    </header>
+
+
+    <main>
+      <section class="cardDisplay">
+        <button class="cardDisplay__reset">
+          <i class="fa-solid fa-trash-can"></i> Reset
+        </button>
+        <div class="cardDisplay__card">
+          <h1 class="cardDisplay__card--name">Nombre Apellido</h1>
+          <h2 class="cardDisplay__card--profesion">Front-end developer</h2>
+          <figure class="cardDisplay__card--photo">
+            <img
+              class="photo"
+              src="./assets/images/photoexample2.png"
+              alt="Foto del perfil"
+            />
+          </figure>
+          <ul class="cardDisplay__card--iconList">
+            <li class="cardListElement">
+              <a class="cardListElement__icon telf" href="#" target="_blank">
+                <i class="fa-solid fa-mobile-screen icon"></i
+              ></a>
+            </li>
+            <li class="cardListElement">
+              <a class="cardListElement__icon email" href="#" target="_blank"
+                ><i class="fa-solid fa-envelope icon"></i
+              ></a>
+            </li>
+            <li class="cardListElement">
+              <a class="cardListElement__icon linkedin" href="#" target="_blank"
+                ><i class="fa-brands fa-linkedin-in icon-dots icon"></i
+              ></a>
+            </li>
+            <li class="cardListElement">
+              <a class="cardListElement__icon github" href="#" target="_blank"
+                ><i class="fa-brands fa-github-alt icon-dots icon"></i
+              ></a>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <form>
+        <section class="design">
+            
+            <div class="design__tab">
+                <i class="fa-solid fa-object-ungroup"></i>
+                <h2 class="design__tab--title">Diseña</h2>
+            </div>
+            <a href="" class="design__tab--arrow"><img src=""/></a>
+
+            <section class="design__palettes">
+                <p class="design__palettes--text">Colores</p>
+                <div class="design__palettes--options">
+                    <input type="checkbox" id="cbox1" value="first_checkbox"> 
+                    <label for="cbox1"><img src="./assets/images/colorpalette1.JPG" alt="paleta de colores 1"/></label>
+
+                    <input type="checkbox" id="cbox2" value="second_checkbox"> 
+                    <label for="cbox2"><img src="./assets/images/colorpalette2.JPG" alt="paleta de colores 2"/></label>
+
+                    <input type="checkbox" id="cbox3" value="third_checkbox"> 
+                    <label for="cbox3"><img src="./assets/images/colorpalette3.JPG" alt="paleta de colores 3"/></label>
+                </div>
+            </section>
+
+        </section>
+        <!-- <html lang="es">
+          <head>
+            <meta charset="UTF-8" />
+            <meta name="viewport" content="width=device-width, initial-scale=1" />
+            <title>Adalab Web Starter Kit</title>
+            <link
+              href="https://fonts.googleapis.com/css?family=Roboto&display=swap"
+              rel="stylesheet"
+            />
+            <link rel="stylesheet" href="./assets/css/main.css" />
+            <!-- <link rel="icon" href="./assets/images/favicon.png" /> -->
+          <!-- </head> -->
+
+         <!--  <body> --> -->
+
+
+
+
+
+          
+            <form action="https://adalab-server-form.herokuapp.com/" method="post">
+              <div class="form">
+                <div class="form__contact">
+                  <label class="form__contact--label" for="text">Nombre completo</label>
+                  <input
+                    class="form__contact--input"
+                    type="text"
+                    id="text"
+                    name="text"
+                    placeholder="Ej:Saily Jill"
+                    required
+                  />
+                </div>
+                <div class="form__contact">
+                  <label class="form__contact--label" for="text">Puesto </label>
+                  <input
+                    class="form__contact--input"
+                    type="text"
+                    id="text"
+                    name="text"
+                    placeholder="Ej: Front-end unicorn"
+                    required
+                  />
+                </div>
+                <div class="form__contact">
+                  <span>imagen de perfil</span>
+                  <button class="form__contact--btn">Añadir imagen</button>
+                </div>
+                <div class="form__contact">
+                  <label class="form__contact--label" for="email">Email </label>
+                  <input
+                    class="form__contact--input"
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="Ej:linkedin.com/in/sally.hill"
+                    required
+                  />
+                </div>
+                <div class="form__contact">
+                  <label class="form__contact--label" for="tel"> Teléfono</label>
+                  <input
+                    class="form__contact--input"
+                    type="tel"
+                    id="tel"
+                    name="tel"
+                    pattern="^[0-9]{9}$"
+                    placeholder="Ej: 555-55-55-55"
+                    required
+                  />
+                </div>
+                <div class="form__contact">
+                  <label class="form__contact--label" for="text"> Linkedin</label>
+                  <input
+                    class="form__contact--input"
+                    type="text"
+                    id="text"
+                    name="text"
+                    placeholder="Ej: ej:linkedin.com/in/sally.hill"
+                    required
+                  />
+                </div>
+                <div class="form__contact">
+                  <label class="form__contact--label" for="text"> Github</label>
+                  <input
+                    class="form__contact--input"
+                    type="text"
+                    id="text"
+                    name="text"
+                    placeholder="Ej:sally.hill"
+                    required
+                  />
+                </div>
+              </div>
+            </form>
+
+            <script src="./assets/js/main.js"></script>
+          </body>
+        </html>
+
+        <section class="share">
+            
+            <div class="share__tab">
+                <i class="fa-solid fa-share-nodes"></i> 
+                <h2 class="title-share">Comparte</h2>
+            </div>
+            <a href="" class="share__tab--arrow"><img src=""/></a>
+
+            <a class="share__buttoncreate" title="Crear tarjeta" href=""><i class="fa-regular fa-address-card">Crear tarjeta</i></a>
+
+            <p class="share__text">La tarjeta ha sido creada:</p>
+            <p class="share__link">*aquí iría el link*</p>
+
+            <a class="share__buttontwitter" title="Compartir en twitter" href=""><i class="fa-brands fa-twitter">Compartir en twitter</i></a>
+
+        </section>
+      </form>
+    </main>
+    
+    <script src="./assets/js/main.js"></script>
+  </body>
+</html>
