@@ -5,52 +5,32 @@
   width: 100%;
   padding: 5px;
   color: $colorSubtitle;
-}
-.form__contact--label {
-  margin-top: 2px;
-  font-size: 1.4rem;
-  font-size: 14px;
-}
-.form__contact--input {
-  padding: 3px 120px 7px 9px;
-  border: 1px solid $colorBorder;
-}
-.form__contact--btn {
-  background-color: $colorIcons;
-  color: $colorWhite;
-  border-radius: 3px;
-  font-size: 14px;
-  padding: 3px 22px 7px;
-  border: none;
-  width: 50%;
-}
-
-//ejemplo suso del &
-/*
-.form__contact {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-  width: 100%;
-  padding: 5px;
-  color: $dark-green-blue;
   &--label {
     margin-top: 2px;
     font-size: 1.4rem;
     font-size: 14px;
-    }
+  }
   &--input {
     padding: 3px 120px 7px 9px;
-    border: 1px solid $hospital-green;
-     }
+    border: 1px solid $colorBorder;
+  }
+  &--div {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+  }
   &--btn {
-    background-color: $dull-orange;
-  color: $white;
-  border-radius: 3px;
-  font-size: 14px;
-  padding: 3px 22px 7px;
-  border: none;
-  width: 50%;
+    background-color: $colorIcons;
+    color: $colorWhite;
+    border-radius: 3px;
+    font-size: 14px;
+    padding: 3px 22px 7px;
+    border: none;
+    width: 50%;
+  }
+  &--square {
+    width: rem(30);
+    height: 30px;
+    border: 1px solid $colorBorder;
   }
 }
-*/
