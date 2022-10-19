@@ -1,18 +1,40 @@
+//Color
+$colorIcons: #e17334;
 $colorWhite: #ffffff;
-$colorNameCard: #114e4e;
+$colorSubtitle: #114e4e;
+$colorHoldplacer:#c5c5c5;
 $colorGreyText: #54585a;
+$colorBorder: #a2deaf;
 
 
-$black: #000000;
-$dark-green-blue: #114e4e;
-$dirty-blue: #438792;
-$hospital-green: #a2deaf;
-$light-khaki: #f9f4dc;
-$white: #ffffff;
-$dull-orange: #e17334;
+//Font
+$font-familyPrimary: 'Open Sans', sans-serif;
+$font-familySecondary: 'Montserrat', sans-serif;
 
-@mixin title($color) {
-  text-transform: uppercase;
-  text-align: center;
-  color: $color;
+
+
+$defaultFontSize:16;
+@function rem($pixels) {
+    @return ($pixels/$defaultFontSize*1rem);
 }
+
+//Mixins
+@mixin t($fontSize,$fontHeight) {
+    font-size: $fontSize;
+    line-height: $fontHeight;
+}
+/* ejemplo:
+para escribir en css:
+font-size: 18px;
+line-height:20px;
+
+USANDO LA FC REM
+font-size: rem(18);
+line-height: rem(20);
+
+USANDO EL @MIXIN
+@include t(rem(18),rem(20));
+
+*/
+
+

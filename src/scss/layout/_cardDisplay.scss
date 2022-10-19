@@ -30,8 +30,10 @@
         box-shadow: 0 1px 10px  rgba(0, 0, 0, 0.20);
         &--name {
             color: $colorNameCard;
-            font-size: 18px;
-            line-height: 20px;
+            @include t(rem(18),rem(20));
+            //
+        /*     font-size: rem(18);
+            line-height: rem(20); */
             font-family: 'Montserrat', sans-serif;
             font-weight: 700;
             padding-left: 20px;

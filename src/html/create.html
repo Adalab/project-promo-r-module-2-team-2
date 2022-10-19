@@ -4,18 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Adalab Web Starter Kit</title>
-    <link
-      href="https://fonts.googleapis.com/css?family=Roboto&display=swap"
-      rel="stylesheet"
-    />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Merriweather:wght@900&family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap"
       rel="stylesheet"
     />
-
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
@@ -23,12 +18,19 @@
     <link rel="stylesheet" href="./assets/css/main.css" />
     <!-- <link rel="icon" href="./assets/images/favicon.png" /> -->
   </head>
+
   <body>
-    <include src="./partials/headerProfile.html"></include>
+    <include src="./partials/headerCreate.html"></include>
+
     <main>
       <include src="./partials/cardDisplay.html"></include>
+      <form>
+        <include src="./partials/formDesign.html"></include>
+        <include src="./partials/formFill.html"></include>
+        <include src="./partials/formShare.html"></include>
+      </form>
     </main>
-
+    <include src="./partials/footer.html"></include>
     <script src="./assets/js/main.js"></script>
   </body>
 </html>

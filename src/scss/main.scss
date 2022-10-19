@@ -4,4 +4,8 @@
 
 
 @import "./layout/header";
-@import "./layout/form";
+@import "./layout/formFill";
+
+:root {
+    font-family: $font-familyPrimary;
+}
