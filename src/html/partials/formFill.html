@@ -1,67 +1,84 @@
-<div class="form__contact">
-  <label class="form__contact--label" for="name">Nombre completo</label>
-  <input
-    class="form__contact--input"
-    type="text"
-    id="name"
-    name="name"
-    placeholder="Ej:Saily Jill"
-    required
-  />
+<fieldset>
+  <div class="containerLegend">
+    <!-- 
+      Consultar secciones dentro del form:
+      20.10.22 Dayana : recomendación hacer Divs en lugar de sections
+      recomienda tambien hacer partials para cada caja "legend"
+    -->
+    <div class="design__tab">
+      <i class="fa-regular fa-keyboard landingSection__container--icon"></i>
+      <legend class="design__tab--title">Rellena</legend>
+    </div>
 
-  <label class="form__contact--label" for="text">Puesto </label>
-  <input
-    class="form__contact--input"
-    type="text"
-    id="text"
-    name="text"
-    placeholder="Ej: Front-end unicorn"
-    required
-  />
-  <label class="form__contact--label" for="text">Imagen de perfil</label>
-  <div class="form__contact--div">
-    <input class="form__contact--btn" type="submit" value="Añadir imagen" />
-    <div class="form__contact--square"></div>
+    <i class="fa-solid fa-chevron-down design__tab--arrow"></i>
   </div>
 
-  <label class="form__contact--label" for="email">Email </label>
-  <input
-    class="form__contact--input"
-    type="email"
-    id="email"
-    name="email"
-    placeholder="Ej:linkedin.com/in/sally.hill"
-    required
-  />
+  <div class="form__contact">
+    <label class="form__contact--label" for="name">Nombre completo</label>
+    <input
+      class="form__contact--input"
+      type="text"
+      id="name"
+      name="name"
+      placeholder="Ej:Saily Jill"
+      required
+    />
 
-  <label class="form__contact--label" for="tel"> Teléfono</label>
-  <input
-    class="form__contact--input"
-    type="tel"
-    id="tel"
-    name="tel"
-    pattern="^[0-9]{9}$"
-    placeholder="Ej: 555-55-55-55"
-    required
-  />
+    <label class="form__contact--label" for="text">Puesto </label>
+    <input
+      class="form__contact--input"
+      type="text"
+      id="text"
+      name="text"
+      placeholder="Ej: Front-end unicorn"
+      required
+    />
+    <label class="form__contact--label" for="text">Imagen de perfil</label>
+    <div class="form__contact--div">
+      <input class="form__contact--btn" type="submit" value="Añadir imagen" />
+      <div class="form__contact--square"></div>
+    </div>
 
-  <label class="form__contact--label" for="text"> Linkedin</label>
-  <input
-    class="form__contact--input"
-    type="text"
-    id="text"
-    name="text"
-    placeholder="Ej: ej:linkedin.com/in/sally.hill"
-    required
-  />
+    <label class="form__contact--label" for="email">Email </label>
+    <input
+      class="form__contact--input"
+      type="email"
+      id="email"
+      name="email"
+      placeholder="Ej:linkedin.com/in/sally.hill"
+      pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+      required
+    />
 
-  <label class="form__contact--label" for="text"> Github</label>
-  <input
-    class="form__contact--input"
-    type="text"
-    id="text"
-    name="text"
-    placeholder="Ej:sally.hill"
-    required
-  />
-</div>
+    <label class="form__contact--label" for="tel"> Teléfono</label>
+    <input
+      class="form__contact--input"
+      type="tel"
+      id="tel"
+      name="tel"
+      pattern="^[0-9]{9}$"
+      placeholder="Ej: 555-55-55-55"
+      required
+    />
+
+    <label class="form__contact--label" for="text"> Linkedin</label>
+    <input
+      class="form__contact--input"
+      type="text"
+      id="text"
+      name="text"
+      placeholder="Ej: ej:linkedin.com/in/sally.hill"
+      required
+    />
+
+    <label class="form__contact--label" for="text"> Github</label>
+    <input
+      class="form__contact--input"
+      type="text"
+      id="text"
+      name="text"
+      placeholder="Ej:sally.hill"
+      required
+    />
+  </div>
+</fieldset>

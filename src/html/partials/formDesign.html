@@ -1,15 +1,22 @@
-<section class="design">
-    
+<fieldset class="design">
+  <div class="containerLegend">
+    <!-- 
+      Consultar secciones dentro del form:
+      20.10.22 Dayana : recomendación hacer Divs en lugar de sections
+      recomienda tambien hacer partials para cada caja "legend"
+    -->
     <div class="design__tab">
-        <i class="fa-solid fa-object-ungroup"></i>
-        <h2 class="design__tab--title">Diseña</h2>
+      <i class="fa-solid fa-object-ungroup"></i>
+      <legend class="design__tab--title">Diseña</legend>
     </div>
-    <a href="" class="design__tab--arrow"><i class="fa-solid fa-chevron-down"></i></a>
 
-    <!-- Aquí icono flecha hacia arriba
+    <i class="fa-solid fa-chevron-down design__tab--arrow"></i>
+  </div>
+
+  <!-- Aquí icono flecha hacia arriba
     <i class="fa-solid fa-chevron-up"></i> -->
 
-    <section class="design__palettes">
+  <!--   <section class="design__palettes">
         <p class="design__palettes--text">Colores</p>
         <div class="design__palettes--options">
             <input type="checkbox" id="cbox1" value="first_checkbox"> 
@@ -21,6 +28,31 @@
             <input type="checkbox" id="cbox3" value="third_checkbox"> 
             <label for="cbox3"><img src="./assets/images/colorpalette3.JPG" alt="paleta de colores 3"/></label>
         </div>
-    </section>
+    </section> -->
 
-</section>
+  <section class="design__palettes">
+    <label class="design__palettes--text" for="color">Colores</label>
+
+    <div class="design__palettes--options">
+      <input type="radio" id="color" name="palette1" value="first_checkbox" />
+      <label aria="Paleta aqua">
+        <div></div>
+      </label>
+      <!--
+        Consulta label (sin mostrar) para usar propiedad aria (facilita discapacidad visual):
+        consultado con Dayana 20.10.22 atributo pendiente de revisar y que nos confirmen.
+        Atributo que solo se aplica en etiqueta label.
+     -->
+
+      <input type="checkbox" id="cbox2" value="second_checkbox" />
+      <label for="cbox2"
+        ><img src="./assets/images/colorpalette2.JPG" alt="paleta de colores 2"
+      /></label>
+
+      <input type="checkbox" id="cbox3" value="third_checkbox" />
+      <label for="cbox3"
+        ><img src="./assets/images/colorpalette3.JPG" alt="paleta de colores 3"
+      /></label>
+    </div>
+  </section>
+</fieldset>
