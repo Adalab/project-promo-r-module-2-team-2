@@ -1,27 +1,32 @@
 .cardDisplay {
     background: linear-gradient(#bfcdd0, #dde9ed);   
     padding:38px 35px 40px 45px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
     &__reset {
+        position:relative;
+        right: 84px;
         text-decoration: none;
         background-color: transparent;
-        margin-bottom: 20px;
-        /* padding:4px 12px 6px 29px; */
-        border:solid 1px $colorWhite;
-        border-radius: 15px;
         width: 75px;
         height: 30px;
+        margin-bottom: 20px;
+        border:solid 1px $colorWhite;
+        border-radius: 15px;
+        font-family: $font-familyPrimary;
+        @include t(rem(12), rem(20));
         text-transform: uppercase;
         display:flex;
         align-items: center;
+        justify-content: center;
         gap:8px;
         color:$colorGreyText;
         }
     &__card {
-        background-color:$colorWhite;;
+        background-color:$colorWhite;
         width: 240px;
-       /*  height: 329px; */
-        padding-top: 21px;
-        padding-bottom: 12px;
+        padding: 21px 0px 12px;
         display: flex;
         flex-direction: column;
         border-radius: 2px;
@@ -30,42 +35,37 @@
         &--name {
             color: $colorSubtitle;
             @include t(rem(18),rem(20));
-            //
-        /*     font-size: rem(18);
-            line-height: rem(20); */
-            font-family: 'Montserrat', sans-serif;
+            font-family:$font-familySecondary;
             font-weight: 700;
-            padding-left: 20px;
-            }
+                 }
         &--profesion {
                 color: $colorGreyText;
-                font-size: 16px;
-                line-height: 20px;
-                font-family: 'Montserrat', sans-serif;
-                padding-left: 20px;
+                @include t(rem(16),rem(20));
+                font-family:$font-familySecondary;
                 }
         &--photo {
             width: 240px;
             height: 200px;
-            transform: translate(-40px);
-             }
+            background:white url(../images/photoexample2.png) no-repeat scroll center;
+            background-size: cover;
+        }
              //pendiente márgenes de los los botonos!
         &--iconList {
             display:flex;
-            /* text-decoration: none; */
             gap:10px;
-            margin: 10px 10px 0 0px;
+            margin: 10px 10px 0 20px;
             font-size: 18px;
             list-style: none;
         }
     }
 }
-    .photo {
-        width: 100%;
-        height: 100%;
-    }
-.cardListElement__icon {
+.cardListElement{
+    text-decoration: none;
+    
+    &__icon {
         border: solid 2px $colorBorder;
+        height: 32px;
+        width: 32px;
         border-radius:16px;
         padding:7px 7px;
         display: flex;
@@ -73,8 +73,12 @@
         justify-content: center;
         align-items: center;
         color: $colorSubtitle;
+        }
     }
-    .cardListElement{
-        text-decoration: none;
-        
+
+
+.titleWrap {
+    border-left:solid 5px #438792;
+    margin-bottom: 10px;
+    padding-left: 15px;//20-5del borde
     }
