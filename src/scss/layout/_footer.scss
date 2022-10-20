@@ -3,6 +3,7 @@
   flex-direction: column;
   align-items: center;
   border-top: solid 1px #d8d8d8;
+ 
 
   &__text {
     @include t(rem(14), rem(1.43));

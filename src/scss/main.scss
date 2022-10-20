@@ -1,11 +1,17 @@
+
+@import "./core/reset";
 @import "./core/variables";
-@import "./layout/headerCreate";
+
 @import "./layout/cardDisplay";
+@import "./layout/footer";
 @import "./layout/formDesign";
 @import "./layout/formFill";
 @import "./layout/formShare";
+@import "./layout/headerCreate";
+
 @import "./pages/index";
-@import "./layout/footer";
+
+
 :root {
     font-family: $font-familyPrimary;
 }
