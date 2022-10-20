@@ -4,17 +4,25 @@
   flex-direction: column;
   align-items: center;
   background-color: #f5f5f5;
-  height: 90vh;//Consultado 20/10 con Dayana Ok. Opción 2 dejar alto fijo al footer.
+  //height: 90vh;//Consultado 20/10 con Dayana Ok. Opción 2 dejar alto fijo al footer.
 
+  @media all and (min-width: 768px) {
+    padding: 22rem 11rem 0 11rem;
+  }
 }
 
 .landingLogo {
   width: 250px;
   height: 63px;
+
+  @media all and (min-width: 768px) {
+    width: 419px;
+    height: 105px;
+  }
 }
 
 .landingSection {
-  margin: 0rem 2.2rem 0 2.2rem;
+  //margin: 0rem 2.2rem 0 2.2rem; Creo que no me hace falta
 
   display: flex;
   flex-direction: column;
@@ -25,13 +33,23 @@
     font-family: "Merriweather", serif;
     font-size: rem(19.2);
     color: $colorIcons;
-    margin: 2.2rem 0 0 0;
+    margin: 2.5rem 0 0.2rem 0;
+
+    @media all and (min-width: 768px) {
+      font-size: rem(24);
+    }
   }
 
   &__text {
-    font-size: rem(12.8);
+    @include t(rem(12.8), rem(17));
+    //font-size: rem(12.8);
     color: $colorSubtitle;
-    margin: 0 0 1.11rem 0;
+    margin: 0 0 1.4rem 0;
+
+    @media all and (min-width: 768px) {
+      @include t(rem(16), rem(24));
+      margin: 0 2rem 1.8rem 2rem;
+    }
   }
 
   &__container {
@@ -42,12 +60,23 @@
     align-items: center;
     gap: 24px;
     border: solid 1.6px rgba(225, 115, 52, 0.21);
-    //opacity: 0.21;
     border-radius: 4px;
 
+    @media all and (min-width: 768px) {
+      width: 325px;
+      height: 86px;
+      gap: 35px;
+      border-radius: 5px;
+    }
+    
     &--icon {
-      font-size: 22.4px;
+      font-size: rem(22.4);
       color: $colorIcons;
+
+      @media all and (min-width: 768px) {
+        font-size: rem(28);
+      }
+
     }
 
     &--text {
@@ -56,9 +85,14 @@
       width: 60px;
       margin-top: 0;
       margin-bottom: 0;
+
+      @media all and (min-width: 768px) {
+        font-size: rem(16);
+      }
     }
   }
 }
+
 
 .landingButton {
   width: 8rem;
@@ -66,7 +100,14 @@
   margin: 2.4rem 3.6rem 1.9rem 3.6rem;
   background-color: #438792;
   border-radius: 21px;
-  border-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @media all and (min-width: 768px) {
+    margin: 12rem 3.6rem 3.6rem 3.6rem;
+    padding: 0.6rem 1.28rem 0.5rem 1.22rem;
+  }
 
   &__link {
     text-decoration: none;
@@ -75,5 +116,5 @@
     font-weight: 600;
     text-transform: uppercase;
     color: $colorWhite;
-  }
+  } 
 }

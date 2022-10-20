@@ -1,20 +1,35 @@
 .landingFooter {
+  height: 110px;
   display: flex;
   flex-direction: column;
   align-items: center;
   border-top: solid 1px #d8d8d8;
+
+  @media all and (min-width: 768px) {
+    height: 60px;
+    flex-direction: row;
+    justify-content: space-between;
+  }
  
 
   &__text {
     @include t(rem(14), rem(1.43));
     color: #6b6b6b;
     opacity: 0.5;
-    padding: 1.13rem 3rem 0 3rem;
+    margin: 1.6rem 3.8rem 0.75rem 3.8rem;
+
+    @media all and (min-width: 768px) {
+      margin: 1.13rem 0 1.34rem 2.6rem;
+    }
   }
 
   &__logo {
     width: 103px;
     height: 40px;
-    margin: 0.75rem 2.9rem 0 3rem;
+    margin: 0.5rem 3rem 1.25rem 3rem;
+
+    @media all and (min-width: 768px) {
+      margin: 0.63rem 2.5rem 0.63rem 0;
+    }
   }
 }
