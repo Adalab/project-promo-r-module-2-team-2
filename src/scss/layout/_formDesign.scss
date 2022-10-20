@@ -1,0 +1,54 @@
+.design {
+    color: $colorGreyText;
+    border-bottom: solid 1px $colorWhiteTwo;
+    padding-top: 27px;
+    // No sé cómo quitar border de los lados
+}
+
+.containerLegend {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 20px;
+    
+    .design__tab {
+        display: flex;
+
+        &--icon {
+            color: $colorIcons;
+            font-size: 20px;
+        }
+        &--legend {
+            text-transform: uppercase;
+            font-size: rem(18);
+            font-weight: 600;
+            padding-left: 10px;
+        }
+    }
+    .design__tab--arrow {
+        width: 16px;
+        height: 18px;
+        padding-right: 30px;
+    }
+}
+
+.palettes {
+    display: flex;
+    justify-content: space-between;
+    padding: 22px 30px 22px 32px;
+    &__text {
+        text-transform: uppercase;
+    }
+}
+
+.aqua {
+    background-image: url("/public/assets/images/colorpalette1.JPG");
+    // display: inline-block;
+}
+
+.red {
+    background-image: url("/public/assets/images/colorpalette2.JPG");
+}
+
+.blueandbeige {
+    background-image: url("/public/assets/images/colorpalette3.JPG");
+}

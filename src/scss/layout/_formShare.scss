@@ -1,0 +1,90 @@
+.share {
+    color: $colorGreyText;
+    border-bottom: solid 1px $colorWhiteTwo;
+    padding-top: 27px;
+    margin-bottom: 30px; //Sólo cuando la pestaña está abierta
+}
+
+.containerLegend {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 20px;
+    
+    .share__tab {
+        display: flex;
+
+        &--icon {
+            color: $colorIcons;
+            font-size: 20px;
+        }
+        &--legend {
+            text-transform: uppercase;
+            font-size: rem(18);
+            font-weight: 600;
+            padding-left: 10px;
+        }
+    }
+    .share__tab--arrow {
+        width: 16px;
+        height: 18px;
+        padding-right: 30px;
+        color: $colorGreyText;
+    }
+}
+
+.shareTwitter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__buttoncreate {
+        background-color: $colorIcons;
+        // Para la pestaña abierta: background-color: #d5d5d5;
+        color: $colorWhite;
+        border-color: $colorIcons;
+        // Quitar sombra a botón?
+        // box-shadow: none;
+        border-radius: 10px;
+        width: 199px;
+        height: 50px;
+        margin-block: 30px;
+
+        &--icon {
+            // No se ve el icono al cambiar fontfamily
+            // Buscar el mismo icono
+            font-family: $font-familyPrimary;
+            font-size: rem(18);
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+    }
+    &__text {
+        font-size: rem(18);
+        font-weight: 600;
+    }
+    &__link {
+        font-size: rem(12);
+        color: $colorIcons;
+        padding-top: 5px;
+    }
+    &__buttonshare {
+        // font-size: rem(14);
+        background-color: #00a0f5;
+        width: 181px;
+        height: 30px;
+        border-radius: 3px;
+        margin-block: 10px 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &--icon{
+            color: $colorWhite;
+            // No se ve el icono al cambiar fontfamily
+            font-family: $font-familyPrimary;
+            font-size: rem(14);
+            text-transform: capitalize;
+            text-decoration: none;
+        }
+    }
+}

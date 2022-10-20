@@ -70,149 +70,169 @@
         </div>
       </section>
 
-      <form>
-        <section class="design">
-            
+      <form action="" method="post">
+        <fieldset class="design">
+          <div class="containerLegend">
+            <!-- 
+              Consultar secciones dentro del form:
+              20.10.22 Dayana : recomendación hacer Divs en lugar de sections
+              recomienda tambien hacer partials para cada caja "legend"
+            -->
             <div class="design__tab">
-                <i class="fa-solid fa-object-ungroup"></i>
-                <h2 class="design__tab--title">Diseña</h2>
+              <i class="fa-solid fa-object-ungroup design__tab--icon"></i>
+              <legend class="design__tab--legend">Diseña</legend>
             </div>
-            <a href="" class="design__tab--arrow"><img src=""/></a>
 
-            <section class="design__palettes">
-                <p class="design__palettes--text">Colores</p>
-                <div class="design__palettes--options">
-                    <input type="checkbox" id="cbox1" value="first_checkbox"> 
-                    <label for="cbox1"><img src="./assets/images/colorpalette1.JPG" alt="paleta de colores 1"/></label>
+            <i class="fa-solid fa-chevron-up design__tab--arrow"></i>
+          </div>
 
-                    <input type="checkbox" id="cbox2" value="second_checkbox"> 
-                    <label for="cbox2"><img src="./assets/images/colorpalette2.JPG" alt="paleta de colores 2"/></label>
+          <!-- Aquí icono flecha hacia abajo
+            <i class="fa-solid fa-chevron-down"></i> -->
 
-                    <input type="checkbox" id="cbox3" value="third_checkbox"> 
-                    <label for="cbox3"><img src="./assets/images/colorpalette3.JPG" alt="paleta de colores 3"/></label>
-                </div>
-            </section>
+          <div class="palettes">
+            <label class="palettes__text" for="color">Colores</label>
 
-        </section>
-        <!-- <html lang="es">
-          <head>
-            <meta charset="UTF-8" />
-            <meta name="viewport" content="width=device-width, initial-scale=1" />
-            <title>Adalab Web Starter Kit</title>
-            <link
-              href="https://fonts.googleapis.com/css?family=Roboto&display=swap"
-              rel="stylesheet"
+            <div class="palettes__options">
+              <input type="radio" id="color" name="palette1" value="first_checkbox" />
+              <label aria="Paleta aqua">
+                <div class="aqua"></div>
+              </label>
+              <input type="radio" id="color" name="palette2" value="second_checkbox" />
+              <label aria="Paleta red">
+                <div class="red"></div>
+              </label>
+              <input type="radio" id="color" name="palette3" value="third_checkbox" />
+              <label aria="Paleta blue & beige">
+                <div class="blueandbeige"></div>
+              </label>
+              <!--
+                Consulta label (sin mostrar) para usar propiedad aria (facilita discapacidad visual):
+                consultado con Dayana 20.10.22 atributo pendiente de revisar y que nos confirmen.
+                Atributo que solo se aplica en etiqueta label.
+             -->
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <div class="containerLegend">
+            <!-- 
+              Consultar secciones dentro del form:
+              20.10.22 Dayana : recomendación hacer Divs en lugar de sections
+              recomienda tambien hacer partials para cada caja "legend"
+            -->
+            <div class="design__tab">
+              <i class="fa-regular fa-keyboard landingSection__container--icon"></i>
+              <legend class="design__tab--title">Rellena</legend>
+            </div>
+
+            <i class="fa-solid fa-chevron-down design__tab--arrow"></i>
+          </div>
+
+          <div class="form__contact">
+            <label class="form__contact--label" for="name">Nombre completo</label>
+            <input
+              class="form__contact--input"
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Ej:Saily Jill"
+              required
             />
-            <link rel="stylesheet" href="./assets/css/main.css" />
-            <!-- <link rel="icon" href="./assets/images/favicon.png" /> -->
-          <!-- </head> -->
 
-         <!--  <body> --> -->
-
-
-
-
-
-          
-            <form action="https://adalab-server-form.herokuapp.com/" method="post">
-              <div class="form">
-                <div class="form__contact">
-                  <label class="form__contact--label" for="text">Nombre completo</label>
-                  <input
-                    class="form__contact--input"
-                    type="text"
-                    id="text"
-                    name="text"
-                    placeholder="Ej:Saily Jill"
-                    required
-                  />
-                </div>
-                <div class="form__contact">
-                  <label class="form__contact--label" for="text">Puesto </label>
-                  <input
-                    class="form__contact--input"
-                    type="text"
-                    id="text"
-                    name="text"
-                    placeholder="Ej: Front-end unicorn"
-                    required
-                  />
-                </div>
-                <div class="form__contact">
-                  <span>imagen de perfil</span>
-                  <button class="form__contact--btn">Añadir imagen</button>
-                </div>
-                <div class="form__contact">
-                  <label class="form__contact--label" for="email">Email </label>
-                  <input
-                    class="form__contact--input"
-                    type="email"
-                    id="email"
-                    name="email"
-                    placeholder="Ej:linkedin.com/in/sally.hill"
-                    required
-                  />
-                </div>
-                <div class="form__contact">
-                  <label class="form__contact--label" for="tel"> Teléfono</label>
-                  <input
-                    class="form__contact--input"
-                    type="tel"
-                    id="tel"
-                    name="tel"
-                    pattern="^[0-9]{9}$"
-                    placeholder="Ej: 555-55-55-55"
-                    required
-                  />
-                </div>
-                <div class="form__contact">
-                  <label class="form__contact--label" for="text"> Linkedin</label>
-                  <input
-                    class="form__contact--input"
-                    type="text"
-                    id="text"
-                    name="text"
-                    placeholder="Ej: ej:linkedin.com/in/sally.hill"
-                    required
-                  />
-                </div>
-                <div class="form__contact">
-                  <label class="form__contact--label" for="text"> Github</label>
-                  <input
-                    class="form__contact--input"
-                    type="text"
-                    id="text"
-                    name="text"
-                    placeholder="Ej:sally.hill"
-                    required
-                  />
-                </div>
-              </div>
-            </form>
-
-            <script src="./assets/js/main.js"></script>
-          </body>
-        </html>
-
-        <section class="share">
-            
-            <div class="share__tab">
-                <i class="fa-solid fa-share-nodes"></i> 
-                <h2 class="title-share">Comparte</h2>
+            <label class="form__contact--label" for="text">Puesto </label>
+            <input
+              class="form__contact--input"
+              type="text"
+              id="text"
+              name="text"
+              placeholder="Ej: Front-end unicorn"
+              required
+            />
+            <label class="form__contact--label" for="text">Imagen de perfil</label>
+            <div class="form__contact--div">
+              <input class="form__contact--btn" type="submit" value="Añadir imagen" />
+              <div class="form__contact--square"></div>
             </div>
-            <a href="" class="share__tab--arrow"><img src=""/></a>
 
-            <a class="share__buttoncreate" title="Crear tarjeta" href=""><i class="fa-regular fa-address-card">Crear tarjeta</i></a>
+            <label class="form__contact--label" for="email">Email </label>
+            <input
+              class="form__contact--input"
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Ej:linkedin.com/in/sally.hill"
+              pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+              required
+            />
 
-            <p class="share__text">La tarjeta ha sido creada:</p>
-            <p class="share__link">*aquí iría el link*</p>
+            <label class="form__contact--label" for="tel"> Teléfono</label>
+            <input
+              class="form__contact--input"
+              type="tel"
+              id="tel"
+              name="tel"
+              pattern="^[0-9]{9}$"
+              placeholder="Ej: 555-55-55-55"
+              required
+            />
 
-            <a class="share__buttontwitter" title="Compartir en twitter" href=""><i class="fa-brands fa-twitter">Compartir en twitter</i></a>
+            <label class="form__contact--label" for="text"> Linkedin</label>
+            <input
+              class="form__contact--input"
+              type="text"
+              id="text"
+              name="text"
+              placeholder="Ej: ej:linkedin.com/in/sally.hill"
+              required
+            />
 
-        </section>
+            <label class="form__contact--label" for="text"> Github</label>
+            <input
+              class="form__contact--input"
+              type="text"
+              id="text"
+              name="text"
+              placeholder="Ej:sally.hill"
+              required
+            />
+          </div>
+        </fieldset>
+
+        <fieldset class="share">
+          <div class="containerLegend">
+            <div class="share__tab">
+              <i class="fa-solid fa-share-nodes share__tab--icon"></i>
+              <h2 class="share__tab--legend">Comparte</h2>
+            </div>
+            <a href="" class="share__tab--arrow"
+              ><i class="fa-solid fa-chevron-up"></i
+            ></a>
+          </div>
+
+          <!-- Aquí icono flecha hacia abajo
+            <i class="fa-solid fa-chevron-down"></i> -->
+
+          <div class="shareTwitter">
+            <button class="shareTwitter__buttoncreate" type="button">
+              <i class="fa-regular fa-address-card shareTwitter__buttoncreate--icon">Crear tarjeta</i>
+            </button>
+         
+            <p class="shareTwitter__text">La tarjeta ha sido creada:</p>
+            <p class="shareTwitter__link">*aquí iría el link*</p>
+
+            <a class="shareTwitter__buttonshare" title="Compartir en twitter" href=""
+              ><i class="fa-brands fa-twitter shareTwitter__buttonshare--icon">Compartir en twitter</i>
+            </a>
+          </div>
+
+        </fieldset>
       </form>
     </main>
-    
+    <footer class="landingFooter">
+        <p class="landingFooter__text">Awesome profile-cards @2022</p>
+        <img class="landingFooter__logo" src="./assets/images/logo-adalab.png" alt="logo de adalab">
+    </footer>
     <script src="./assets/js/main.js"></script>
   </body>
 </html>

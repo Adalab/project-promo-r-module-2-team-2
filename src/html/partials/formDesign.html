@@ -6,53 +6,37 @@
       recomienda tambien hacer partials para cada caja "legend"
     -->
     <div class="design__tab">
-      <i class="fa-solid fa-object-ungroup"></i>
-      <legend class="design__tab--title">Diseña</legend>
+      <i class="fa-solid fa-object-ungroup design__tab--icon"></i>
+      <legend class="design__tab--legend">Diseña</legend>
     </div>
 
-    <i class="fa-solid fa-chevron-down design__tab--arrow"></i>
+    <i class="fa-solid fa-chevron-up design__tab--arrow"></i>
   </div>
 
-  <!-- Aquí icono flecha hacia arriba
-    <i class="fa-solid fa-chevron-up"></i> -->
+  <!-- Aquí icono flecha hacia abajo
+    <i class="fa-solid fa-chevron-down"></i> -->
 
-  <!--   <section class="design__palettes">
-        <p class="design__palettes--text">Colores</p>
-        <div class="design__palettes--options">
-            <input type="checkbox" id="cbox1" value="first_checkbox"> 
-            <label for="cbox1"><img src="./assets/images/colorpalette1.JPG" alt="paleta de colores 1"/></label>
+  <div class="palettes">
+    <label class="palettes__text" for="color">Colores</label>
 
-            <input type="checkbox" id="cbox2" value="second_checkbox"> 
-            <label for="cbox2"><img src="./assets/images/colorpalette2.JPG" alt="paleta de colores 2"/></label>
-
-            <input type="checkbox" id="cbox3" value="third_checkbox"> 
-            <label for="cbox3"><img src="./assets/images/colorpalette3.JPG" alt="paleta de colores 3"/></label>
-        </div>
-    </section> -->
-
-  <section class="design__palettes">
-    <label class="design__palettes--text" for="color">Colores</label>
-
-    <div class="design__palettes--options">
+    <div class="palettes__options">
       <input type="radio" id="color" name="palette1" value="first_checkbox" />
       <label aria="Paleta aqua">
-        <div></div>
+        <div class="aqua"></div>
+      </label>
+      <input type="radio" id="color" name="palette2" value="second_checkbox" />
+      <label aria="Paleta red">
+        <div class="red"></div>
+      </label>
+      <input type="radio" id="color" name="palette3" value="third_checkbox" />
+      <label aria="Paleta blue & beige">
+        <div class="blueandbeige"></div>
       </label>
       <!--
         Consulta label (sin mostrar) para usar propiedad aria (facilita discapacidad visual):
         consultado con Dayana 20.10.22 atributo pendiente de revisar y que nos confirmen.
         Atributo que solo se aplica en etiqueta label.
      -->
-
-      <input type="checkbox" id="cbox2" value="second_checkbox" />
-      <label for="cbox2"
-        ><img src="./assets/images/colorpalette2.JPG" alt="paleta de colores 2"
-      /></label>
-
-      <input type="checkbox" id="cbox3" value="third_checkbox" />
-      <label for="cbox3"
-        ><img src="./assets/images/colorpalette3.JPG" alt="paleta de colores 3"
-      /></label>
     </div>
-  </section>
+  </div>
 </fieldset>
