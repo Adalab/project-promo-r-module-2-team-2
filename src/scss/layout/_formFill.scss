@@ -1,3 +1,23 @@
+.containerLegend {
+  display: flex;
+  flex-direction: row;
+  color: $colorGreyText;
+}
+.form__contact__tab {
+  display: flex;
+  gap: 10px;
+  margin-top: 1rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: rem(18);
+}
+.form__contact--arrow {
+  width: 16px;
+  height: 18px;
+  padding-right: 30px;
+  margin-top: 1rem;
+}
+
 .form__contact {
   display: flex;
   flex-direction: column;
@@ -6,13 +26,14 @@
   padding: 5px;
   color: $colorSubtitle;
   &--label {
-    margin-top: 2px;
+    margin-top: 1rem;
     font-size: 1.4rem;
     font-size: 14px;
   }
   &--input {
     padding: 3px 120px 7px 9px;
     border: 1px solid $colorBorder;
+    margin-top: 0.3rem;
   }
   &--div {
     display: flex;
