@@ -1,23 +1,25 @@
+// Estilos pestaña Diseña
 .design {
     color: $colorGreyText;
     border-bottom: solid 1px $colorWhiteTwo;
-    padding-top: 27px;
-    // No sé cómo quitar border de los lados
 }
 
 .containerLegend {
     width: 100%;
     display: flex;
     justify-content: space-between;
-    padding-left: 20px;
+    padding-top: 10px;
+    padding-bottom: 7px;
+
     
     .design__tab {
         display: flex;
 
         &--icon {
             color: $colorIcons;
-            font-size: 20px;
+            font-size: rem(20);
         }
+
         &--legend {
             text-transform: uppercase;
             font-size: rem(18);
@@ -25,34 +27,50 @@
             padding-left: 10px;
         }
     }
+
     .design__tab--arrow {
         width: 16px;
         height: 18px;
-        padding-right: 30px;
     }
 }
+// Hasta aquí Estilos pestaña Diseña
+
 
 .palettes {
     display: flex;
     justify-content: space-between;
-    padding: 22px 30px 22px 32px;
+    padding: 22px 0px 30px 19px;
+   
     &__text {
         text-transform: uppercase;
     }
 }
 
 .colorContainer {
-    width:120px ;
+    width: 120px ;
     height: 25px;
     display: flex;
+    margin-bottom: 20px;
+
+    .inputColor {
+        margin-right: 20px; 
+        //margin-right: 10px es la medida del zeplin, pero no queda alineado con la flecha
+    }
+
+    .colorBox {
+        width: 30px ;
+        height: 25px;
+    }
+
+    .aqua-1{background-color:$colorSubtitle;}
+    .aqua-2{background-color: $colorAqua2;}
+    .aqua-3{background-color: $colorBorder;}
+    
+    .red-1{background-color: $colorDarkRed;}
+    .red-2{background-color: $colorRed;}
+    .red-3{background-color: $colorOrange;}
+    
+    .blueandbeige-1{background-color: $colorBlueGrey;}
+    .blueandbeige-2{background-color: $colorBeige;}
+    .blueandbeige-3{background-color: $colorLightBlueGrey;}
 }
-.inputColor {
-    margin-right: 10px;
-}
-.colorBox {
-    width:30px ;
-    height: 25px;
-}
-.aqua-1{background-color:$colorSubtitle;}
-.aqua-2{background-color: $colorAqua2;}
-.aqua-3{background-color: $colorBorder;}
