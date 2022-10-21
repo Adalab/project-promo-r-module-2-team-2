@@ -6,6 +6,7 @@
 }
 
 .containerLegend {
+    width: 100%;
     display: flex;
     justify-content: space-between;
     padding-left: 20px;
@@ -40,15 +41,18 @@
     }
 }
 
-.aqua {
-    background-image: url("/public/assets/images/colorpalette1.JPG");
-    // display: inline-block;
+.colorContainer {
+    width:120px ;
+    height: 25px;
+    display: flex;
 }
-
-.red {
-    background-image: url("/public/assets/images/colorpalette2.JPG");
+.inputColor {
+    margin-right: 10px;
 }
-
-.blueandbeige {
-    background-image: url("/public/assets/images/colorpalette3.JPG");
+.colorBox {
+    width:30px ;
+    height: 25px;
 }
+.aqua-1{background-color:$colorSubtitle;}
+.aqua-2{background-color: $colorAqua2;}
+.aqua-3{background-color: $colorBorder;}

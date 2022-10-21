@@ -1,5 +1,5 @@
 <fieldset class="design">
-  <div class="containerLegend">
+  <legend class="containerLegend">
     <!-- 
       Consultar secciones dentro del form:
       20.10.22 Dayana : recomendación hacer Divs en lugar de sections
@@ -7,31 +7,57 @@
     -->
     <div class="design__tab">
       <i class="fa-solid fa-object-ungroup design__tab--icon"></i>
-      <legend class="design__tab--legend">Diseña</legend>
+      <h2 class="design__tab--legend">Diseña</h2>
     </div>
 
     <i class="fa-solid fa-chevron-up design__tab--arrow"></i>
-  </div>
+  </legend>
 
   <!-- Aquí icono flecha hacia abajo
     <i class="fa-solid fa-chevron-down"></i> -->
 
   <div class="palettes">
     <label class="palettes__text" for="color">Colores</label>
-
     <div class="palettes__options">
-      <input type="radio" id="color" name="palette1" value="first_checkbox" />
-      <label aria="Paleta aqua">
-        <div class="aqua"></div>
-      </label>
-      <input type="radio" id="color" name="palette2" value="second_checkbox" />
-      <label aria="Paleta red">
-        <div class="red"></div>
-      </label>
-      <input type="radio" id="color" name="palette3" value="third_checkbox" />
-      <label aria="Paleta blue & beige">
-        <div class="blueandbeige"></div>
-      </label>
+      <div class="aqua colorContainer">
+        <input
+          class="inputColor"
+          type="radio"
+          id="color1"
+          name="palette"
+          value="first_checkbox"
+        />
+        <div class="colorBox aqua-1"></div>
+        <div class="colorBox aqua-2"></div>
+        <div class="colorBox aqua-3"></div>
+      </div>
+
+      <div class="red colorContainer">
+        <input
+          class="inputColor"
+          type="radio"
+          id="color2"
+          name="palette"
+          value="second_checkbox"
+        />
+        <div class="colorBox red-1"></div>
+        <div class="colorBox red-2"></div>
+        <div class="colorBox red-3"></div>
+      </div>
+
+      <div class="blueandbeige colorContainer">
+        <input
+          class="inputColor"
+          type="radio"
+          id="color3"
+          name="palette"
+          value="third_checkbox"
+        />
+        <div class="colorBox blueandbeige-1"></div>
+        <div class="colorBox blueandbeige-2"></div>
+        <div class="colorBox blueandbeige-3"></div>
+      </div>
+
       <!--
         Consulta label (sin mostrar) para usar propiedad aria (facilita discapacidad visual):
         consultado con Dayana 20.10.22 atributo pendiente de revisar y que nos confirmen.
