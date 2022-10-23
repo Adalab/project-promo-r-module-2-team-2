@@ -22,8 +22,8 @@
   display: flex;
   flex-direction: column;
   gap: 6px;
-  width: 100%;
-  padding: 5px;
+ /*  padding-right:3px; NOE: Propuesta margen derecho para que en 320*768 no coche*/
+  width:100%;
   color: $colorSubtitle;
   &--label {
     margin-top: 1rem;
