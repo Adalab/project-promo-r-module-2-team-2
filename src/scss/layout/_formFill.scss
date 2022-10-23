@@ -1,6 +1,5 @@
 .containerLegend {
   display: flex;
-  flex-direction: row;
   color: $colorGreyText;
 }
 .form__contact__tab {
@@ -11,29 +10,37 @@
   font-weight: 600;
   font-size: rem(18);
 }
-.form__contact--arrow {
+.form__contact--arrow1 {
   width: 16px;
   height: 18px;
   padding-right: 30px;
   margin-top: 1rem;
 }
-
+.form__contact--arrow2 {
+  width: 16px;
+  height: 18px;
+  padding-right: 30px;
+  margin-top: 1rem;
+  display: none;
+}
 .form__contact {
   display: flex;
   flex-direction: column;
   gap: 6px;
- /*  padding-right:3px; NOE: Propuesta margen derecho para que en 320*768 no coche*/
-  width:100%;
-  color: $colorSubtitle;
+  width: 100%;
+
   &--label {
     margin-top: 1rem;
-    font-size: 1.4rem;
     font-size: 14px;
+    color: $colorSubtitle;
+    font-weight: normal;
   }
   &--input {
-    padding: 3px 120px 7px 9px;
+    padding: 5px 120px 7px 9px;
     border: 1px solid $colorBorder;
     margin-top: 0.3rem;
+    padding-right: 3px;
+    height: 30px;
   }
   &--div {
     display: flex;
@@ -53,5 +60,13 @@
     width: rem(30);
     height: 30px;
     border: 1px solid $colorBorder;
+  }
+}
+@media all and (min-width: 768px) {
+  .form__contact--input {
+    width: 329px;
+  }
+  .form__contact--btn {
+    width: 50%;
   }
 }
