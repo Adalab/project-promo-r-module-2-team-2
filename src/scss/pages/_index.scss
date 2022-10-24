@@ -1,25 +1,26 @@
 .body {
-  /* height: 100vh; */
+height: 100vh;
 }
 
 .landing {
-  height:90vh;
+  height: 85vh;
   padding: 95px 20px 30px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   background-color:#f5f5f5;
   /* height: 90vh; *///Consultado 20/10 con Dayana Ok. Opción 2 dejar alto fijo al footer.
-
   @media all and (min-width: 768px) {
-    padding: 22rem 11rem 0 11rem;
+    padding: 100px 100px 60px;
+    height: 90vh;
+    justify-content: flex-end;
   }
 }
 
 .landingLogo {
   width: 250px;
   height: 63px;
-
   @media all and (min-width: 768px) {
     width: 419px;
     height: 105px;
@@ -27,19 +28,19 @@
 }
 
 .landingSection {
-  //margin: 0rem 2.2rem 0 2.2rem; Creo que no me hace falta
-
+  margin-top: 35.4px;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
+  @media all and (min-width: 768px) {
+    margin-top: 31px;
+  }
 
   &__title {
     font-family: "Merriweather", serif;
     font-size: rem(19.2);
     color: $colorIcons;
-    margin: 2.5rem 0 0.2rem 0;
-
     @media all and (min-width: 768px) {
       font-size: rem(24);
     }
@@ -47,9 +48,7 @@
 
   &__text {
     @include t(rem(12.8), rem(17));
-    //font-size: rem(12.8);
     color: $colorSubtitle;
-    margin: 0 0 1.4rem 0;//pasar a pixel
     width: 35ch;
     @media all and (min-width: 768px) {
     @include t(rem(16), rem(24));
@@ -57,6 +56,7 @@
     }
 
   &__container {
+    margin-top: 17.8px;
     width: 268px;
     height: 73.8px;
     display: flex;
@@ -65,8 +65,8 @@
     gap: 24px;
     border: solid 1.6px rgba(225, 115, 52, 0.21);
     border-radius: 4px;
-
     @media all and (min-width: 768px) {
+      margin-top: 27px;
       width: 325px;
       height: 86px;
       gap: 35px;
@@ -76,20 +76,15 @@
     &--icon {
       font-size: rem(22.4);
       color: $colorIcons;
-
       @media all and (min-width: 768px) {
         font-size: rem(28);
       }
-
     }
 
     &--text {
       font-size: rem(12.8);
       color: $colorSubtitle;
       width: 60px;
-      margin-top: 0;
-      margin-bottom: 0;
-
       @media all and (min-width: 768px) {
         font-size: rem(16);
       }
@@ -99,18 +94,16 @@
 
 
 .landingButton {
+  margin-top: 38.6px;
   width: 8rem;
   height: 2.6rem;
-  margin: 2.4rem 3.6rem 1.9rem 3.6rem;
   background-color: #438792;
   border-radius: 21px;
   display: flex;
   justify-content: center;
   align-items: center;
-
   @media all and (min-width: 768px) {
-    margin: 12rem 3.6rem 3.6rem 3.6rem;
-    padding: 0.6rem 1.28rem 0.5rem 1.22rem;
+    margin-top: 186px;
   }
 
   &__link {

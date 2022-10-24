@@ -1,35 +1,32 @@
 .landingFooter {
   /* height: 110px; */
+  padding: 16px 10px 20px;
+  background-color: $colorWhite;
   display: flex;
   flex-direction: column;
   align-items: center;
   border-top: solid 1px #d8d8d8;
-
   @media all and (min-width: 768px) {
-   /*  height: 60px */;
+    /* height: 60px; */
+    padding: 10px 40px 10px 41px;
     flex-direction: row;
     justify-content: space-between;
   }
  
 
   &__text {
-    @include t(rem(14), rem(1.43));
+    @include t(rem(14), rem(20));
     color: #6b6b6b;
     opacity: 0.5;
-    margin: 1.6rem 3.8rem 0.75rem 3.8rem;
-
     @media all and (min-width: 768px) {
-      margin: 1.13rem 0 1.34rem 2.6rem;
     }
   }
 
   &__logo {
     width: 103px;
     height: 40px;
-    margin: 0.5rem 3rem 1.25rem 3rem;
-
+    margin-top:12px;
     @media all and (min-width: 768px) {
-      margin: 0.63rem 2.5rem 0.63rem 0;
     }
   }
 }
