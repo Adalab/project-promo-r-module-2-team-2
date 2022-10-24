@@ -1,31 +1,29 @@
 <fieldset class="share">
-  <legend class="containerLegend">
+  <legend class="js-containerLegendShare containerLegend">
     <div class="share__tab">
       <i class="fa-solid fa-share-nodes share__tab--icon"></i>
       <h2 class="share__tab--legend">Comparte</h2>
     </div>
-    <a href="" class="share__tab--arrow"
-      ><i class="fa-solid fa-chevron-up"></i
-    ></a>
+    <i class="js-upArrow2 fa-solid fa-chevron-up design__tab--arrow"></i>
+    <i class="js-downArrow2 hide fa-solid fa-chevron-down"></i>
   </legend>
 
-  <!-- Aquí icono flecha hacia abajo
-    <i class="fa-solid fa-chevron-down"></i> -->
-
-  <div class="shareTwitter">
+  <div class="js-containerCreate shareTwitter">
     <button class="shareTwitter__buttoncreate" type="button">
-      <i class="fa-regular fa-address-card shareTwitter__buttoncreate--icon"></i>
+      <i
+        class="fa-regular fa-address-card shareTwitter__buttoncreate--icon"
+      ></i>
       <span class="shareTwitter__buttoncreate--text">Crear tarjeta</span>
     </button>
+  </div>
 
+  <div class="shareTwitter hide">
     <p class="shareTwitter__text">La tarjeta ha sido creada:</p>
     <p class="shareTwitter__link">*aquí iría el link*</p>
 
     <a class="shareTwitter__buttonshare" title="Compartir en twitter" href=""
-      ><i class="fa-brands fa-twitter shareTwitter__buttonshare--icon"></i
-      >
-      <span class= "shareTwitter__buttonshare--text">Compartir en twitter</span>
-
+      ><i class="fa-brands fa-twitter shareTwitter__buttonshare--icon"></i>
+      <span class="shareTwitter__buttonshare--text">Compartir en twitter</span>
     </a>
   </div>
 </fieldset>
