@@ -1,40 +1,11 @@
 // Estilos pestaña Diseña
-.design {
-    color: $colorGreyText;
-    border-bottom: solid 1px $colorWhiteTwo;
-}
 
-.containerLegend {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    padding-top: 10px;
-    padding-bottom: 7px;
-
-    
-    .design__tab {
-        display: flex;
-
-        &--icon {
-            color: $colorIcons;
-            font-size: rem(20);
-        }
-
-        &--legend {
-            text-transform: uppercase;
-            font-size: rem(18);
-            font-weight: 600;
-            padding-left: 10px;
-        }
-    }
-
-    .design__tab--arrow {
-        width: 16px;
-        height: 18px;
-    }
-}
 // Hasta aquí Estilos pestaña Diseña
 
+/* .design {
+    color: $colorGreyText;
+    border-bottom: solid 1px $colorWhiteTwo;
+} */
 
 .palettes {
     display: flex;

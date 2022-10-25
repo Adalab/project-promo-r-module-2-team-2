@@ -1,11 +1,10 @@
-.design {
+/* .design {
   color: $colorGreyText;
   border-bottom: solid 1px $colorWhiteTwo;
-}
+} */
 .form__contact__tab {
   display: flex;
   gap: 10px;
-  margin-top: 1rem;
   text-transform: uppercase;
   font-weight: 600;
   font-size: rem(18);
@@ -17,12 +16,12 @@
 .form__contact--arrow1 {
   width: 16px;
   height: 18px;
-  margin-top: 1rem;
+ /*  margin-top: 1rem */;
 }
 .form__contact--arrow2 {
   width: 16px;
   height: 18px;
-  margin-top: 1rem;
+ /*  margin-top: 1rem; */
 }
 .form__contact {
   display: flex;
