@@ -21,7 +21,6 @@ const containerCreate = document.querySelector ('.js-containerCreate');
 //bloque ocultar Diseña
 
 legendDesign.addEventListener ('click', (event)=> {
-    event.preventDefault();
     if (containerDesign.classList.contains('hide'))
     {
         containerDesign.classList.remove('hide');
@@ -54,7 +53,6 @@ legendDesign.addEventListener ('click', (event)=> {
 */
 
 legendFill.addEventListener ('click', (event)=> {
-    event.preventDefault();
     containerFill.classList.toggle ('hide');
     upArrow1.classList.toggle ('hide');
     downArrow1.classList.toggle ('hide');
@@ -62,7 +60,6 @@ legendFill.addEventListener ('click', (event)=> {
 
 
 legendShare.addEventListener ('click', (event)=> {
-    event.preventDefault();
     containerCreate.classList.toggle ('hide');
     upArrow2.classList.toggle ('hide');
     downArrow2.classList.toggle ('hide');

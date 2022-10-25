@@ -1,12 +1,3 @@
-// Estilos pestaña Diseña
-
-// Hasta aquí Estilos pestaña Diseña
-
-/* .design {
-    color: $colorGreyText;
-    border-bottom: solid 1px $colorWhiteTwo;
-} */
-
 .palettes {
     display: flex;
     justify-content: space-between;
@@ -18,7 +9,7 @@
 }
 
 .colorContainer {
-    width: 120px ;
+    width: 120px;
     height: 25px;
     display: flex;
     margin-bottom: 20px;
