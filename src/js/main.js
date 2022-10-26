@@ -66,5 +66,6 @@ legendShare.addEventListener('click', () => {
 btnCreate.addEventListener('click', (event) => {
   event.preventDefault();
   shareTwitter.classList.remove('hide');
-  btnCreate.classList.remove('grey');
+  btnCreate.classList.toggle('grey');
+  btnCreate.disabled = true;
 });
