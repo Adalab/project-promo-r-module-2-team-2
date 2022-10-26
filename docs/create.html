@@ -21,48 +21,60 @@
 
   <body>
     <header class="headerCreate">
-      <img
-        class="headerCreate__img"
-        src="./assets/images/logo-awesome-profile-cards.svg"
-        alt="logo Awesome profile cards"
-        title="logo Awesome profile cards"
-      />
+      <a href="./index.html"
+        ><img
+          class="headerCreate__img"
+          src="./assets/images/logo-awesome-profile-cards.svg"
+          alt="logo Awesome profile cards"
+          title="logo Awesome profile cards"
+        />
+      </a>
     </header>
 
 
-    <main>
+    <main class="mainCreate">
       <section class="cardDisplay">
         <button class="cardDisplay__reset">
           <i class="fa-solid fa-trash-can"></i> Reset
         </button>
         <div class="cardDisplay__card">
-          <h1 class="cardDisplay__card--name">Nombre Apellido</h1>
-          <h2 class="cardDisplay__card--profesion">Front-end developer</h2>
-          <figure class="cardDisplay__card--photo">
-            <img
-              class="photo"
-              src="./assets/images/photoexample2.png"
-              alt="Foto del perfil"
-            />
-          </figure>
+          <div class="titleWrap">
+            <h1 class="cardDisplay__card--name">Nombre Apellido</h1>
+            <h3 class="cardDisplay__card--profesion">Front-end developer</h3>
+          </div>
+          <div class="cardDisplay__card--photo"></div>
           <ul class="cardDisplay__card--iconList">
             <li class="cardListElement">
-              <a class="cardListElement__icon telf" href="#" target="_blank">
+              <a
+                class="cardListElement__icon telf"
+                href="tel:exapmle"
+                target="_blank"
+              >
                 <i class="fa-solid fa-mobile-screen icon"></i
               ></a>
             </li>
             <li class="cardListElement">
-              <a class="cardListElement__icon email" href="#" target="_blank"
-                ><i class="fa-solid fa-envelope icon"></i
-              ></a>
+              <a
+                class="cardListElement__icon email"
+                href="mailto:example@gmail.com"
+                target="_blank"
+              >
+                <i class="fa-regular fa-envelope"></i>
+              </a>
             </li>
             <li class="cardListElement">
-              <a class="cardListElement__icon linkedin" href="#" target="_blank"
+              <a
+                class="cardListElement__icon linkedin"
+                href="https://www.linkedin.com"
+                target="_blank"
                 ><i class="fa-brands fa-linkedin-in icon-dots icon"></i
               ></a>
             </li>
             <li class="cardListElement">
-              <a class="cardListElement__icon github" href="#" target="_blank"
+              <a
+                class="cardListElement__icon github"
+                href="https://github.com/"
+                target="_blank"
                 ><i class="fa-brands fa-github-alt icon-dots icon"></i
               ></a>
             </li>
@@ -70,41 +82,67 @@
         </div>
       </section>
 
-      <form action="" method="post">
-        <fieldset class="design">
-          <div class="containerLegend">
+      <form class="form" action="" method="post">
+        <fieldset class="fieldset">
+          <legend class="containerLegend js-containerLegend">
             <!-- 
               Consultar secciones dentro del form:
               20.10.22 Dayana : recomendación hacer Divs en lugar de sections
               recomienda tambien hacer partials para cada caja "legend"
             -->
-            <div class="design__tab">
-              <i class="fa-solid fa-object-ungroup design__tab--icon"></i>
-              <legend class="design__tab--legend">Diseña</legend>
+            <div class="legend__tab">
+              <i class="fa-solid fa-object-ungroup legend__tab--icon"></i>
+              <h2 class="legend__tab--title">Diseña</h2>
             </div>
 
-            <i class="fa-solid fa-chevron-up design__tab--arrow"></i>
-          </div>
+            <i class="js-upArrow fa-solid fa-chevron-up legend__tab--arrow"></i>
+            <i
+              class="js-downArrow hide fa-solid fa-chevron-down legend__tab--arrow"
+            ></i>
+          </legend>
 
-          <!-- Aquí icono flecha hacia abajo
-            <i class="fa-solid fa-chevron-down"></i> -->
-
-          <div class="palettes">
+          <div class="palettes js-palettes">
             <label class="palettes__text" for="color">Colores</label>
-
             <div class="palettes__options">
-              <input type="radio" id="color" name="palette1" value="first_checkbox" />
-              <label aria="Paleta aqua">
-                <div class="aqua"></div>
-              </label>
-              <input type="radio" id="color" name="palette2" value="second_checkbox" />
-              <label aria="Paleta red">
-                <div class="red"></div>
-              </label>
-              <input type="radio" id="color" name="palette3" value="third_checkbox" />
-              <label aria="Paleta blue & beige">
-                <div class="blueandbeige"></div>
-              </label>
+              <div class="aqua colorContainer">
+                <input
+                  class="inputColor"
+                  type="radio"
+                  id="color1"
+                  name="palette"
+                  value="first_checkbox"
+                />
+                <div class="colorBox aqua-1"></div>
+                <div class="colorBox aqua-2"></div>
+                <div class="colorBox aqua-3"></div>
+              </div>
+
+              <div class="red colorContainer">
+                <input
+                  class="inputColor"
+                  type="radio"
+                  id="color2"
+                  name="palette"
+                  value="second_checkbox"
+                />
+                <div class="colorBox red-1"></div>
+                <div class="colorBox red-2"></div>
+                <div class="colorBox red-3"></div>
+              </div>
+
+              <div class="blueandbeige colorContainer">
+                <input
+                  class="inputColor"
+                  type="radio"
+                  id="color3"
+                  name="palette"
+                  value="third_checkbox"
+                />
+                <div class="colorBox blueandbeige-1"></div>
+                <div class="colorBox blueandbeige-2"></div>
+                <div class="colorBox blueandbeige-3"></div>
+              </div>
+
               <!--
                 Consulta label (sin mostrar) para usar propiedad aria (facilita discapacidad visual):
                 consultado con Dayana 20.10.22 atributo pendiente de revisar y que nos confirmen.
@@ -114,22 +152,24 @@
           </div>
         </fieldset>
 
-        <fieldset>
-          <div class="containerLegend">
+        <fieldset class="fieldset">
+          <legend class="js-containerLegendFill containerLegend">
             <!-- 
               Consultar secciones dentro del form:
               20.10.22 Dayana : recomendación hacer Divs en lugar de sections
               recomienda tambien hacer partials para cada caja "legend"
             -->
-            <div class="design__tab">
-              <i class="fa-regular fa-keyboard landingSection__container--icon"></i>
-              <legend class="design__tab--title">Rellena</legend>
+            <div class="legend__tab">
+              <i class="fa-regular fa-keyboard legend__tab--icon"></i>
+              <h2 class="legend__tab--title">Rellena</h2>
             </div>
+            <i
+              class="js-downArrow1 hide fa-solid fa-chevron-down legend__tab--arrow"
+            ></i>
+            <i class="js-upArrow1 fa-solid fa-chevron-up legend__tab--arrow"></i>
+          </legend>
 
-            <i class="fa-solid fa-chevron-down design__tab--arrow"></i>
-          </div>
-
-          <div class="form__contact">
+          <div class="js-form__contact form__contact">
             <label class="form__contact--label" for="name">Nombre completo</label>
             <input
               class="form__contact--input"
@@ -199,34 +239,37 @@
           </div>
         </fieldset>
 
-        <fieldset class="share">
-          <div class="containerLegend">
-            <div class="share__tab">
-              <i class="fa-solid fa-share-nodes share__tab--icon"></i>
-              <h2 class="share__tab--legend">Comparte</h2>
+        <fieldset class="fieldset">
+          <legend class="js-containerLegendShare containerLegend">
+            <div class="legend__tab">
+              <i class="fa-solid fa-share-nodes legend__tab--icon"></i>
+              <h2 class="legend__tab--title">Comparte</h2>
             </div>
-            <a href="" class="share__tab--arrow"
-              ><i class="fa-solid fa-chevron-up"></i
-            ></a>
+            <i class="js-upArrow2 fa-solid fa-chevron-up legend__tab--arrow"></i>
+            <i
+              class="js-downArrow2 hide fa-solid fa-chevron-down legend__tab--arrow"
+            ></i>
+          </legend>
+
+          <div class="js-containerCreate shareTwitter">
+            <button class="js-btn-create shareTwitter__buttoncreate grey" type="button">
+              <i
+                class="fa-regular fa-address-card shareTwitter__buttoncreate--icon"
+              ></i>
+              <span class="shareTwitter__buttoncreate--text">Crear tarjeta</span>
+            </button>
           </div>
 
-          <!-- Aquí icono flecha hacia abajo
-            <i class="fa-solid fa-chevron-down"></i> -->
-
-          <div class="shareTwitter">
-            <button class="shareTwitter__buttoncreate" type="button">
-              <i class="fa-regular fa-address-card shareTwitter__buttoncreate--icon">Crear tarjeta</i>
-            </button>
-         
-            <p class="shareTwitter__text">La tarjeta ha sido creada:</p>
-            <p class="shareTwitter__link">*aquí iría el link*</p>
-
-            <a class="shareTwitter__buttonshare" title="Compartir en twitter" href=""
-              ><i class="fa-brands fa-twitter shareTwitter__buttonshare--icon">Compartir en twitter</i>
+          <div class="js-shareTwitter shareTwitter hide">
+            <h4 class="shareTwitter__text">La tarjeta ha sido creada:</h4>
+            <a class="shareTwitter__link" title="Enlace" href="">*aquí iría el link*</a>
+            <a class="shareTwitter__buttonshare" title="Compartir en twitter" href="https://twitter.com/intent/tweet" target="_blank">
+              <i class="fa-brands fa-twitter shareTwitter__buttonshare--icon"></i>
+              <span class="shareTwitter__buttonshare--text">Compartir en twitter</span>
             </a>
           </div>
-
         </fieldset>
+
       </form>
     </main>
     <footer class="landingFooter">
