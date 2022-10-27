@@ -4,13 +4,7 @@
   align-items: center;
 
   &__buttoncreate {
-    background-color: $colorIcons;
-    // Para la pestaña abierta:background-color: #d5d5d5;
     color: $colorWhite;
-    border-color: $colorIcons;
-    border: $colorIcons;
-    // Para la pestaña abierta: border: #d5d5d5;
-    // box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.32);
     border-radius: 12px;
     width: 199px;
     height: 50px;
@@ -65,8 +59,23 @@
     }
   }
 }
-.grey {
+
+.btnOrange {
+  background-color: $colorIcons;
+  border-color: $colorIcons;
+  border: $colorIcons;
+}
+.btnGrey {
   background-color: #d5d5d5;
   border: #d5d5d5;
   box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.32);
+}
+
+.shareTwitter1{
+  color: $colorGreyText;
+  border-bottom: solid 1px $colorWhiteTwo;
+}
+
+.shareTwitter2 {
+  margin-top:20px;
 }

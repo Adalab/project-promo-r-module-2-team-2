@@ -19,37 +19,20 @@ const btnCreate = document.querySelector('.js-btn-create');
 const shareTwitter = document.querySelector('.js-shareTwitter');
 
 //bloque ocultar Diseña
-
+/* 
 legendDesign.addEventListener('click', () => {
   if (containerDesign.classList.contains('hide')) {
     containerDesign.classList.remove('hide');
     upArrow.classList.remove('hide');
     downArrow.classList.add('hide');
+
   } else {
     containerDesign.classList.add('hide');
     upArrow.classList.add('hide');
     downArrow.classList.remove('hide');
   }
 });
-
-//bloque ocultar Rellena
-
-/*
- legendFill.addEventListener ('click', (event)=> {
-    event.preventDefault();
-    if (containerFill.classList.contains ('hide')) {
-        containerFill.classList.remove ('hide');
-        upArrow1.classList.remove ('hide');
-        downArrow1.classList.add ('hide');
-    }
-    else {
-        containerFill.classList.add ('hide');
-        upArrow1.classList.add ('hide');
-        downArrow1.classList.remove ('hide');
-    }
-}) 
-*/
-
+ */
 legendFill.addEventListener('click', () => {
   containerFill.classList.toggle('hide');
   upArrow1.classList.toggle('hide');
@@ -60,12 +43,23 @@ legendShare.addEventListener('click', () => {
   containerCreate.classList.toggle('hide');
   upArrow2.classList.toggle('hide');
   downArrow2.classList.toggle('hide');
+  shareTwitter.classList.add ('hide');
+  btnCreate.classList.remove('btnGrey');
+  btnCreate.classList.add('btnOrange');
 });
 
-//NOTA HACER EL BOTON MAÑANA Y LA SIGUENTE PARTE DE LA TARJETA
+
 btnCreate.addEventListener('click', (event) => {
   event.preventDefault();
   shareTwitter.classList.remove('hide');
-  btnCreate.classList.toggle('grey');
-  btnCreate.disabled = true;
+  btnCreate.classList.add('btnGrey');
+});
+
+
+//SIMPLIFLICANDO codigo oculta
+
+legendDesign.addEventListener('click', () => {
+  containerDesign.classList.toggle ('hide');
+  upArrow.classList.toggle('hide');
+  downArrow.classList.toggle('hide');
 });
