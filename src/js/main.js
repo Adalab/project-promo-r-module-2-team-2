@@ -19,24 +19,29 @@ const btnCreate = document.querySelector('.js-btn-create');
 const shareTwitter = document.querySelector('.js-shareTwitter');
 
 //bloque ocultar Diseña
-/* 
-legendDesign.addEventListener('click', () => {
-  if (containerDesign.classList.contains('hide')) {
-    containerDesign.classList.remove('hide');
-    upArrow.classList.remove('hide');
-    downArrow.classList.add('hide');
 
-  } else {
-    containerDesign.classList.add('hide');
-    upArrow.classList.add('hide');
-    downArrow.classList.remove('hide');
-  }
+legendDesign.addEventListener('click', () => {
+  containerDesign.classList.toggle ('hide');
+  upArrow.classList.toggle('hide');
+  downArrow.classList.toggle('hide');
 });
- */
+
 legendFill.addEventListener('click', () => {
   containerFill.classList.toggle('hide');
   upArrow1.classList.toggle('hide');
   downArrow1.classList.toggle('hide');
+
+  containerDesign.classList.add('hide');
+  upArrow.classList.add('hide');
+  downArrow.classList.remove('hide');
+
+  containerCreate.classList.add('hide');
+  upArrow2.classList.add('hide');
+  downArrow2.classList.remove('hide');
+  shareTwitter.classList.add ('hide');
+  btnCreate.classList.remove('btnGrey');
+  btnCreate.classList.add('btnOrange');
+
 });
 
 legendShare.addEventListener('click', () => {
@@ -46,8 +51,16 @@ legendShare.addEventListener('click', () => {
   shareTwitter.classList.add ('hide');
   btnCreate.classList.remove('btnGrey');
   btnCreate.classList.add('btnOrange');
-});
+  
+  containerDesign.classList.add('hide');
+  upArrow.classList.add('hide');
+  downArrow.classList.remove('hide');
 
+  containerFill.classList.add('hide');
+  upArrow1.classList.add('hide');
+  downArrow1.classList.remove('hide');
+
+});
 
 btnCreate.addEventListener('click', (event) => {
   event.preventDefault();
@@ -55,11 +68,12 @@ btnCreate.addEventListener('click', (event) => {
   btnCreate.classList.add('btnGrey');
 });
 
+//para que siempre se muestre Diseña
 
-//SIMPLIFLICANDO codigo oculta
-
-legendDesign.addEventListener('click', () => {
-  containerDesign.classList.toggle ('hide');
-  upArrow.classList.toggle('hide');
-  downArrow.classList.toggle('hide');
-});
+/* if (containerFill.classList.contains('hide') && containerCreate.classList.contains('hide')) {
+  
+  containerDesign.classList.remove('hide');
+  upArrow.classList.remove('hide');
+  downArrow.classList.add('hide');
+  console.log('FUNCIONA');
+} */
