@@ -39,15 +39,17 @@
         </button>
         <div class="cardDisplay__card">
           <div class="titleWrap">
-            <h1 class="cardDisplay__card--name">Nombre Apellido</h1>
-            <h3 class="cardDisplay__card--profesion">Front-end developer</h3>
+            <h1 class="js-nameCard cardDisplay__card--name">Nombre Apellido</h1>
+            <h3 class="js-careerCard cardDisplay__card--profesion">
+              Front-end developer
+            </h3>
           </div>
           <div class="cardDisplay__card--photo"></div>
           <ul class="cardDisplay__card--iconList">
             <li class="cardListElement">
               <a
-                class="cardListElement__icon telf"
-                href="tel:exapmle"
+                class="js-telCard cardListElement__icon telf"
+                href="tel:example"
                 target="_blank"
               >
                 <i class="fa-solid fa-mobile-screen icon"></i
@@ -55,7 +57,7 @@
             </li>
             <li class="cardListElement">
               <a
-                class="cardListElement__icon email"
+                class="js-mailCard cardListElement__icon email"
                 href="mailto:example@gmail.com"
                 target="_blank"
               >
@@ -64,7 +66,7 @@
             </li>
             <li class="cardListElement">
               <a
-                class="cardListElement__icon linkedin"
+                class="js-linkedinCard cardListElement__icon linkedin"
                 href="https://www.linkedin.com"
                 target="_blank"
                 ><i class="fa-brands fa-linkedin-in icon-dots icon"></i
@@ -72,7 +74,7 @@
             </li>
             <li class="cardListElement">
               <a
-                class="cardListElement__icon github"
+                class="js-githubCard cardListElement__icon github"
                 href="https://github.com/"
                 target="_blank"
                 ><i class="fa-brands fa-github-alt icon-dots icon"></i
@@ -152,7 +154,7 @@
           </div>
         </fieldset>
 
-        <fieldset class="fieldset">
+        <fieldset class="js-fieldsetFill fieldset">
           <legend class="js-containerLegendFill containerLegend">
             <!-- 
               Consultar secciones dentro del form:
@@ -163,16 +165,14 @@
               <i class="fa-regular fa-keyboard legend__tab--icon"></i>
               <h2 class="legend__tab--title">Rellena</h2>
             </div>
-            <i
-              class="js-downArrow1 hide fa-solid fa-chevron-down legend__tab--arrow"
-            ></i>
-            <i class="js-upArrow1 fa-solid fa-chevron-up legend__tab--arrow"></i>
+            <i class="js-downArrow1 fa-solid fa-chevron-down legend__tab--arrow"></i>
+            <i class="js-upArrow1 hide fa-solid fa-chevron-up legend__tab--arrow"></i>
           </legend>
 
-          <div class="js-form__contact form__contact">
+          <div class="js-form__contact form__contact hide">
             <label class="form__contact--label" for="name">Nombre completo</label>
             <input
-              class="form__contact--input"
+              class="js-name form__contact--input"
               type="text"
               id="name"
               name="name"
@@ -182,7 +182,7 @@
 
             <label class="form__contact--label" for="text">Puesto </label>
             <input
-              class="form__contact--input"
+              class="js-career form__contact--input"
               type="text"
               id="text"
               name="text"
@@ -197,7 +197,7 @@
 
             <label class="form__contact--label" for="email">Email </label>
             <input
-              class="form__contact--input"
+              class="js-mailInput form__contact--input"
               type="email"
               id="email"
               name="email"
@@ -208,7 +208,7 @@
 
             <label class="form__contact--label" for="tel"> Teléfono</label>
             <input
-              class="form__contact--input"
+              class="js-telInput form__contact--input"
               type="tel"
               id="tel"
               name="tel"
@@ -219,7 +219,7 @@
 
             <label class="form__contact--label" for="text"> Linkedin</label>
             <input
-              class="form__contact--input"
+              class="js-linkedinInput form__contact--input"
               type="text"
               id="text"
               name="text"
@@ -229,7 +229,7 @@
 
             <label class="form__contact--label" for="text"> Github</label>
             <input
-              class="form__contact--input"
+              class="js-githubInput form__contact--input"
               type="text"
               id="text"
               name="text"
@@ -245,14 +245,15 @@
               <i class="fa-solid fa-share-nodes legend__tab--icon"></i>
               <h2 class="legend__tab--title">Comparte</h2>
             </div>
-            <i class="js-upArrow2 fa-solid fa-chevron-up legend__tab--arrow"></i>
-            <i
-              class="js-downArrow2 hide fa-solid fa-chevron-down legend__tab--arrow"
-            ></i>
+            <i class="js-upArrow2 fa-solid fa-chevron-up legend__tab--arrow hide"></i>
+            <i class="js-downArrow2 fa-solid fa-chevron-down legend__tab--arrow"></i>
           </legend>
 
-          <div class="js-containerCreate shareTwitter">
-            <button class="js-btn-create shareTwitter__buttoncreate grey" type="button">
+          <div class="js-containerCreate shareTwitter shareTwitter1 hide">
+            <button
+              class="js-btn-create shareTwitter__buttoncreate btnOrange"
+              type="button"
+            >
               <i
                 class="fa-regular fa-address-card shareTwitter__buttoncreate--icon"
               ></i>
@@ -260,10 +261,15 @@
             </button>
           </div>
 
-          <div class="js-shareTwitter shareTwitter hide">
+          <div class="js-shareTwitter shareTwitter hide shareTwitter2">
             <h4 class="shareTwitter__text">La tarjeta ha sido creada:</h4>
             <a class="shareTwitter__link" title="Enlace" href="">*aquí iría el link*</a>
-            <a class="shareTwitter__buttonshare" title="Compartir en twitter" href="https://twitter.com/intent/tweet" target="_blank">
+            <a
+              class="shareTwitter__buttonshare"
+              title="Compartir en twitter"
+              href="https://twitter.com/intent/tweet"
+              target="_blank"
+            >
               <i class="fa-brands fa-twitter shareTwitter__buttonshare--icon"></i>
               <span class="shareTwitter__buttonshare--text">Compartir en twitter</span>
             </a>
