@@ -68,12 +68,57 @@ btnCreate.addEventListener('click', (event) => {
   btnCreate.classList.add('btnGrey');
 });
 
-//para que siempre se muestre Diseña
+//PENDIENTE para que siempre se muestre Diseña
 
-/* if (containerFill.classList.contains('hide') && containerCreate.classList.contains('hide')) {
-  
-  containerDesign.classList.remove('hide');
-  upArrow.classList.remove('hide');
-  downArrow.classList.add('hide');
-  console.log('FUNCIONA');
-} */
+// VOLCADO DE DATOS A LA TARJETA
+
+const careerInput = document.querySelector('.js-career');
+const nameInput = document.querySelector('.js-name');
+const careerCardInput = document.querySelector('.js-careerCard');
+const nameCardInput = document.querySelector('.js-nameCard');
+
+
+const mailInput = document.querySelector('.js-mailInput');
+const telInput = document.querySelector('.js-telInput');
+const linkedinInput = document.querySelector('.js-linkedinInput');
+const githubInput = document.querySelector('.js-githubInput');
+const telCard = document.querySelector('.js-telCard');
+const mailCard = document.querySelector('.js-mailCard');
+const linkedinCard = document.querySelector('.js-linkedinCard');
+const githubCard = document.querySelector('.js-githubCard');
+
+
+const fieldsetFill = document.querySelector('.js-fieldsetFill');
+
+fieldsetFill.addEventListener ('input', (event)=> {
+/* console.log (event.currentTarget); */
+  const inputTarget = event.target;
+  let inputTargetValue = inputTarget.value;
+  if (inputTarget.classList.contains('js-name')) {
+    nameCardInput.innerHTML = inputTargetValue ;
+  } 
+  else if  (inputTarget.classList.contains('js-career')) {
+    careerCardInput.innerHTML = inputTargetValue ;
+  } 
+  else if  (inputTarget.classList.contains('js-telInput')) {
+    telCard.href=`tel:${inputTargetValue}`;
+  }
+  else if  (inputTarget.classList.contains('js-mailInput')) {
+    mailCard.href=`mailto:${inputTargetValue}`;
+  }
+  else if  (inputTarget.classList.contains('js-linkedinInput')) {
+    linkedinCard.href=`${inputTargetValue}`;
+  }
+  else if  (inputTarget.classList.contains('js-githubInput')) {
+    githubCard.href=`${inputTargetValue}`;
+  }
+
+  if  (inputTarget.classList.contains('js-name')&& inputTargetValue==='') {
+    nameCardInput.innerHTML = 'Nombre Apellido';
+  }
+  else if  (inputTarget.classList.contains('js-career')&& inputTargetValue==='') {
+    careerCardInput.innerHTML = 'Front-end developer';
+  }
+});
+
+
