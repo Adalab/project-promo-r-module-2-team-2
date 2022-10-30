@@ -1,10 +1,4 @@
-.form__contact__tab {
-  display: flex;
-  gap: 10px;
-  text-transform: uppercase;
-  font-weight: 600;
-  font-size: rem(18);
-}
+
 .form__contact--icon {
   color: $colorIcons;
   font-size: rem(20);
@@ -38,6 +32,7 @@
     margin-top: 0.3rem;
     padding-right: 3px;
     height: 30px;
+    width: 280px;
   }
   &--div {
     display: flex;
