@@ -18,6 +18,8 @@ const containerCreate = document.querySelector('.js-containerCreate');
 const btnCreate = document.querySelector('.js-btn-create');
 const shareTwitter = document.querySelector('.js-shareTwitter');
 
+const resetBtnElement = document.querySelector ('.js-resetBtn');
+
 //bloque ocultar Diseña
 
 legendDesign.addEventListener('click', () => {
@@ -90,35 +92,61 @@ const githubCard = document.querySelector('.js-githubCard');
 
 const fieldsetFill = document.querySelector('.js-fieldsetFill');
 
-fieldsetFill.addEventListener ('input', (event)=> {
-/* console.log (event.currentTarget); */
+const data =  {
+  palette:'',
+  name:'',
+  job: '',
+  phone:'',
+  email:'',
+  linkedin:'',
+  github:'',
+  photo:'',
+};
+
+function dataCollect (){
   const inputTarget = event.target;
   let inputTargetValue = inputTarget.value;
-  if (inputTarget.classList.contains('js-name')) {
-    nameCardInput.innerHTML = inputTargetValue ;
-  } 
-  else if  (inputTarget.classList.contains('js-career')) {
-    careerCardInput.innerHTML = inputTargetValue ;
-  } 
-  else if  (inputTarget.classList.contains('js-telInput')) {
-    telCard.href=`tel:${inputTargetValue}`;
-  }
-  else if  (inputTarget.classList.contains('js-mailInput')) {
-    mailCard.href=`mailto:${inputTargetValue}`;
-  }
-  else if  (inputTarget.classList.contains('js-linkedinInput')) {
-    linkedinCard.href=`${inputTargetValue}`;
-  }
-  else if  (inputTarget.classList.contains('js-githubInput')) {
-    githubCard.href=`${inputTargetValue}`;
-  }
+  data[inputTarget.name]=inputTargetValue;
+}
 
-  if  (inputTarget.classList.contains('js-name')&& inputTargetValue==='') {
+function renderCard() {
+  nameCardInput.innerHTML = data.name;
+  careerCardInput.innerHTML = data.job;
+  telCard.href = data.phone;
+  mailCard.href = data.email;
+  linkedinCard.href = data.linkedin;
+  githubCard.href =data.github;
+  if  (data.name==='') {
     nameCardInput.innerHTML = 'Nombre Apellido';
   }
-  else if  (inputTarget.classList.contains('js-career')&& inputTargetValue==='') {
+  if  (data.job==='') {
     careerCardInput.innerHTML = 'Front-end developer';
   }
-});
+}
 
 
+fieldsetFill.addEventListener ('input', (event)=> {
+  event.preventDefault();
+  dataCollect();
+  renderCard();
+} );
+
+
+
+function handleReset(event){
+  event.preventDefault();
+  nameInput.value = '';
+  careerInput.value = '';
+  mailInput.value = '';
+  telInput.value = '';
+  linkedinInput.value = '';
+  githubInput.value = '';
+  nameCardInput.innerHTML = 'Nombre Apellido';
+  careerCardInput.innerHTML = 'Front-end developer';
+  telCard.href= 'tel:example';
+  mailCard.href= 'mailto:example@gmail.com';
+  linkedinCard.href= 'https://www.linkedin.com';
+  githubCard.href= 'https://github.com/';
+}
+
+resetBtnElement.addEventListener ('click', handleReset);

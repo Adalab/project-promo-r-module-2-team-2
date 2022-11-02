@@ -29,13 +29,18 @@
       class="js-career form__contact--input"
       type="text"
       id="text"
-      name="text"
+      name="job"
       placeholder="Ej: Front-end unicorn"
       required
     />
     <label class="form__contact--label" for="text">Imagen de perfil</label>
     <div class="form__contact--div">
-      <input class="form__contact--btn" type="submit" value="Añadir imagen" />
+      <input
+        class="form__contact--btn"
+        type="submit"
+        value="Añadir imagen"
+        name="photo"
+      />
       <div class="form__contact--square"></div>
     </div>
 
@@ -45,7 +50,7 @@
       type="email"
       id="email"
       name="email"
-      placeholder="Ej:linkedin.com/in/sally.hill"
+      placeholder="Ej: sally.hill@gamil.com"
       pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
       required
     />
@@ -55,7 +60,7 @@
       class="js-telInput form__contact--input"
       type="tel"
       id="tel"
-      name="tel"
+      name="phone"
       pattern="^[0-9]{9}$"
       placeholder="Ej: 555-55-55-55"
       required
@@ -66,8 +71,8 @@
       class="js-linkedinInput form__contact--input"
       type="text"
       id="text"
-      name="text"
-      placeholder="Ej: ej:linkedin.com/in/sally.hill"
+      name="linkedin"
+      placeholder="Ej: linkedin.com/in/sally.hill"
       required
     />
 
@@ -76,8 +81,8 @@
       class="js-githubInput form__contact--input"
       type="text"
       id="text"
-      name="text"
-      placeholder="Ej:sally.hill"
+      name="github"
+      placeholder="Ej:github.com/sally.hill"
       required
     />
   </div>
