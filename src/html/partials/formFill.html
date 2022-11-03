@@ -1,5 +1,5 @@
 <fieldset class="js-fieldsetFill fieldset">
-  <legend class="js-containerLegendFill containerLegend">
+  <legend class="js-containerLegend js-containerLegendFill containerLegend">
     <!-- 
       Consultar secciones dentro del form:
       20.10.22 Dayana : recomendación hacer Divs en lugar de sections
@@ -13,7 +13,7 @@
     <i class="js-upArrow1 hide fa-solid fa-chevron-up legend__tab--arrow"></i>
   </legend>
 
-  <div class="js-form__contact form__contact hide">
+  <div class="js-container js-form__contact form__contact hide">
     <label class="form__contact--label" for="name">Nombre completo</label>
     <input
       class="js-name form__contact--input"
@@ -35,13 +35,15 @@
     />
     <label class="form__contact--label" for="text">Imagen de perfil</label>
     <div class="form__contact--div">
+      <label class="form__contact--btn" for="photo">Añadir imagen </label>
       <input
-        class="form__contact--btn"
-        type="submit"
-        value="Añadir imagen"
+        class="js__profile-upload-btn hide"
+        type="file"
+        value=""
         name="photo"
+        id="photo"
       />
-      <div class="form__contact--square"></div>
+      <div class="js__profile-preview form__contact--square"></div>
     </div>
 
     <label class="form__contact--label" for="email">Email </label>

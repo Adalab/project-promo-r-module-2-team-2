@@ -46,12 +46,16 @@
     font-size: 14px;
     padding: 3px 22px 7px;
     border: none;
-    width: 50%;
+    width: 140px;
+    height: 30px;
+    display: flex;
+    align-items: center;
   }
   &--square {
     width: rem(30);
     height: 30px;
     border: 1px solid $colorBorder;
+    background-size: cover;
   }
 }
 @media all and (min-width: 768px) {
