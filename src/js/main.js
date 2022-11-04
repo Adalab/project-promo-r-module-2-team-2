@@ -176,6 +176,7 @@ resetBtnElement.addEventListener("click", handleReset);
 const paletteOption1 = document.querySelector('.js-palette1');
 const paletteOption2 = document.querySelector('.js-palette2');
 const paletteOption3 = document.querySelector('.js-palette3');
+const paletteOption4 = document.querySelector('.js-palette4');
 const titleWrap = document.querySelector ('.js-titleWrap');
 const cardDisplayContainer = document.querySelector('.js-cardDisplay__card');
 
@@ -202,13 +203,15 @@ palette3.addEventListener('click',() =>{
  const changePalette = (event) => {
   cardDisplayContainer.classList.remove ('palette1');
   cardDisplayContainer.classList.remove ('palette2');  
-  cardDisplayContainer.classList.remove ('palette3');  
+  cardDisplayContainer.classList.remove ('palette3'); 
+  cardDisplayContainer.classList.remove ('palette4');  
   cardDisplayContainer.classList.add(event.currentTarget.value);
 }
 
 paletteOption1.addEventListener ('click', changePalette);
 paletteOption2.addEventListener ('click', changePalette);
 paletteOption3.addEventListener ('click', changePalette); 
+paletteOption4.addEventListener ('click', changePalette); 
 
 /* const changePalette = (event) => {
   titleWrap.classList.remove ('palette1');

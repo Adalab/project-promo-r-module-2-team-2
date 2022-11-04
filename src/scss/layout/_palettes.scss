@@ -26,3 +26,11 @@
             color: $colorBlueGrey;}
 }
 
+.palette4 {
+
+    .nameCardColor {color: $colorDarkGreen;}
+    .titleWrapColor {border-left:solid 5px $colorIcons}
+    .iconColor {
+            border: solid 2px $colorLightBlueGrey;
+            color: $colorLightGreen;}
+}
