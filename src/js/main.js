@@ -3,7 +3,7 @@
 const legendElement = document.querySelectorAll(".js-containerLegend");
 const containerElement = document.querySelectorAll(".js-container");
 
-/* const legendDesign = document.querySelector('.js-containerLegend'); */
+
 const upArrow = document.querySelector(".js-upArrow");
 const downArrow = document.querySelector(".js-downArrow");
 const containerDesign = document.querySelector(".js-palettes");
@@ -23,23 +23,43 @@ const shareTwitter = document.querySelector(".js-shareTwitter");
 
 const resetBtnElement = document.querySelector(".js-resetBtn");
 
-//bloque ocultar Diseña
+//Funciones básicas de clases
 
-/* 
-posición en cabecera, obtener el indice
-contenedore[indice].classList.toggle 
 
-*/
+function addClass (element, classElement) {
+  element.classList.add(classElement);
+}
+function removeClass (element, classElement) {
+  element.classList.remove(classElement);
+}
+function toggleClass (element, classElement) {
+  element.classList.toggle(classElement);
+}
+
+
+//mostrar section abierta ocultar el resto
 
 function colapse(event) {
   const clickElement = event.currentTarget;
   const clickElementSibling = clickElement.nextElementSibling;
-  clickElementSibling.classList.toggle("hide");
+  toggleClass (clickElementSibling,'hide' );
+  if (containerDesign !== clickElementSibling) {
+    addClass (containerDesign, 'hide');
+    addClass (upArrow,'rotate');
+  } else {toggleClass (upArrow,'rotate');}
+  
+  if (containerFill !== clickElementSibling) {
+    addClass (containerFill, 'hide');
+    addClass (upArrow1,'rotate');
+  }else {toggleClass (upArrow1,'rotate');}
 
-  /* console.log ('click'); */
-  /*   console.log (legendElement[i],containerElement[i]);
-  containerElement[i].classList.toggle('hide'); */
+  if (containerCreate !== clickElementSibling) 
+    { addClass (containerCreate, 'hide');
+    addClass (upArrow2,'rotate');
+  } else {toggleClass (upArrow2,'rotate');}
+
 }
+
 
 function toggleLegend() {
   for (let i = 0; i < legendElement.length; i++) {
@@ -48,67 +68,15 @@ function toggleLegend() {
 }
 toggleLegend();
 
-/* for (const legend of legendElement){ 
 
-    legend.addEventListener ('click', ()=>{
-      for (const container of containerElement){ 
-      .classList.toggle ('hide');
-      } */
-
-/*   legendElement[legend] 
-  legendElement[legend] .classList.toggle ('hide');
-  legendElement.addEventListener('click', (toggleLegend)); */
-/*  }
-} */
-/* toggleLegend(); */
-
-/* 
-legendDesign.addEventListener('click', () => {
-  containerDesign.classList.toggle ('hide');
-  upArrow.classList.toggle('hide');
-  downArrow.classList.toggle('hide');
-}); */
-
-/* legendFill.addEventListener('click', () => {
-  containerFill.classList.toggle('hide');
-  upArrow1.classList.toggle('hide');
-  downArrow1.classList.toggle('hide');
-
-  containerDesign.classList.add('hide');
-  upArrow.classList.add('hide');
-  downArrow.classList.remove('hide');
-
-  containerCreate.classList.add('hide');
-  upArrow2.classList.add('hide');
-  downArrow2.classList.remove('hide');
-  shareTwitter.classList.add ('hide');
-  btnCreate.classList.remove('btnGrey');
-  btnCreate.classList.add('btnOrange');
-
-});
-
-legendShare.addEventListener('click', () => {
-  containerCreate.classList.toggle('hide');
-  upArrow2.classList.toggle('hide');
-  downArrow2.classList.toggle('hide');
-  shareTwitter.classList.add ('hide');
-  btnCreate.classList.remove('btnGrey');
-  btnCreate.classList.add('btnOrange');
-  
-  containerDesign.classList.add('hide');
-  upArrow.classList.add('hide');
-  downArrow.classList.remove('hide');
-
-  containerFill.classList.add('hide');
-  upArrow1.classList.add('hide');
-  downArrow1.classList.remove('hide');
-
-}); */
+//boton crear
 
 btnCreate.addEventListener("click", (event) => {
   event.preventDefault();
-  shareTwitter.classList.remove("hide");
-  btnCreate.classList.add("btnGrey");
+  console.log(data);
+
+/*   shareTwitter.classList.remove("hide");
+  btnCreate.classList.add("btnGrey"); */
 });
 
 //PENDIENTE para que siempre se muestre Diseña
@@ -142,6 +110,7 @@ const data = {
   photo: "",
 };
 
+//meter valores al objeto
 function dataCollect() {
   const inputTarget = event.target;
   let inputTargetValue = inputTarget.value;
@@ -173,6 +142,18 @@ fieldsetFill.addEventListener("input", (event) => {
 
 function handleReset(event) {
   event.preventDefault();
+
+  //vaciar el objeto pte renderizar recorrer el array del objeto data
+  data.palette = '';
+  data.name= '';
+  data.job= '';
+  data.phone= '';
+  data.email= '';
+  data.linkedin= '';
+  data.github= '';
+  data.photo= '';
+
+
   nameInput.value = "";
   careerInput.value = "";
   mailInput.value = "";
@@ -190,4 +171,52 @@ function handleReset(event) {
 resetBtnElement.addEventListener("click", handleReset);
 
 
+//PALETAS
 
+const paletteOption1 = document.querySelector('.js-palette1');
+const paletteOption2 = document.querySelector('.js-palette2');
+const paletteOption3 = document.querySelector('.js-palette3');
+const titleWrap = document.querySelector ('.js-titleWrap');
+const cardDisplayContainer = document.querySelector('.js-cardDisplay__card');
+
+/* nameCardInput */
+/* 
+palette1.addEventListener('click',() =>{
+  addClass(nameCardInput,'palette1');
+  removeClass(nameCardInput,'palette2');
+  removeClass(nameCardInput,'palette3');
+});
+
+palette2.addEventListener('click',() =>{
+  addClass(nameCardInput,'palette2');
+  removeClass(nameCardInput,'palette1');
+  removeClass(nameCardInput,'palette3');
+});
+palette3.addEventListener('click',() =>{
+  addClass(nameCardInput,'palette3');
+  removeClass(nameCardInput,'palette1');
+  removeClass(nameCardInput,'palette2');
+});
+ */
+
+ const changePalette = (event) => {
+  cardDisplayContainer.classList.remove ('palette1');
+  cardDisplayContainer.classList.remove ('palette2');  
+  cardDisplayContainer.classList.remove ('palette3');  
+  cardDisplayContainer.classList.add(event.currentTarget.value);
+}
+
+paletteOption1.addEventListener ('click', changePalette);
+paletteOption2.addEventListener ('click', changePalette);
+paletteOption3.addEventListener ('click', changePalette); 
+
+/* const changePalette = (event) => {
+  titleWrap.classList.remove ('palette1');
+  titleWrap.classList.remove ('palette2');  
+  titleWrap.classList.remove ('palette3');  
+  titleWrap.classList.add(event.currentTarget.value);
+}
+
+palette1.addEventListener ('click', changePalette);
+palette2.addEventListener ('click', changePalette);
+palette3.addEventListener ('click', changePalette); */

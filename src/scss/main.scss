@@ -10,6 +10,7 @@
 @import './layout/formShare';
 @import './layout/headerCreate';
 @import './layout/legendDisplay.scss';
+@import './layout/palettes.scss';
 
 @import './pages/index';
 
@@ -19,4 +20,9 @@
 
 .hide {
   display: none;
+}
+
+
+.rotate {
+  transform: rotate(180deg);
 }
