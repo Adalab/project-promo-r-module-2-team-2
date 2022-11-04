@@ -1,5 +1,7 @@
 .cardDisplay {
-    background: linear-gradient(#bfcdd0, #dde9ed);   
+    // background: linear-gradient(#bfcdd0, #dde9ed);   
+    background-color: $colorLightOrange;
+    //background-image:  url(../images/background-card-chamaleon.jpg);  //Cambiar opacidad o dejar naranja clarito
     padding:38px 35px 40px 45px;
     @media all and (min-width:768px) {
         padding:180px 44px 40px 45px;
