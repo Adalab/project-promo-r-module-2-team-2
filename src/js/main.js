@@ -15,8 +15,14 @@ const shareTwitter = document.querySelector(".js-shareTwitter");
 
 const resetBtnElement = document.querySelector(".js-resetBtn");
 
-//Funciones básicas de clases
 
+
+
+
+
+
+
+//Funciones básicas de clases
 
 function addClass (element, classElement) {
   element.classList.add(classElement);
@@ -75,7 +81,6 @@ toggleLegend();
 
 btnCreate.addEventListener("click", (event) => {
   event.preventDefault();
-  console.log('HOLA');
   removeClass (shareTwitter,'hide');
   addClass (btnCreate,'btnGrey');
 });
@@ -101,7 +106,12 @@ const githubCard = document.querySelector(".js-githubCard");
 
 const fieldsetFill = document.querySelector(".js-fieldsetFill");
 
-const data = {
+const cardLinkElement = document.querySelector('.js-cardLink ');
+const twitterBtn = document.querySelector('.js-twitterBtn');
+
+
+
+let data = {
   palette: "",
   name: "",
   job: "",
@@ -112,12 +122,18 @@ const data = {
   photo: "",
 };
 
+
 //meter valores al objeto
 function dataCollect() {
   const inputTarget = event.target;
   let inputTargetValue = inputTarget.value;
   data[inputTarget.name] = inputTargetValue;
-}
+ /*  console.log(data); */
+  //si no se elige paleta, se selecciona la predefinida
+  if (data.palette === '') {
+    data.palette = 'palette1';
+  }
+  }
 
 function renderCard() {
   nameCardInput.innerHTML = data.name;
@@ -139,6 +155,12 @@ fieldsetFill.addEventListener("input", (event) => {
   dataCollect();
   renderCard();
 });
+
+containerDesign.addEventListener("input", (event) => {
+  event.preventDefault();
+  dataCollect();
+});
+
 
 // Boton reset
 
@@ -173,7 +195,7 @@ function handleReset(event) {
 resetBtnElement.addEventListener("click", handleReset);
 
 
-//PALETAS
+//PALETAS - volcado
 
 const paletteOption1 = document.querySelector('.js-palette1');
 const paletteOption2 = document.querySelector('.js-palette2');
@@ -191,4 +213,73 @@ const changePalette = (event) => {
 paletteOption1.addEventListener ('click', changePalette);
 paletteOption2.addEventListener ('click', changePalette);
 paletteOption3.addEventListener ('click', changePalette); 
+
+
+//guardar los datos en local para cuando se cargue la pagina
+
+function saveLocalStorage (data){
+  localStorage.setItem('dataFromForm', JSON.stringify(data));
+}
+
+
+
+//Crear tarjeta
+
+btnCreate.addEventListener('click', (event)=> {
+  event.preventDefault();
+/*   localStorage.setItem('dataFromForm', JSON.stringify(data));
+  saveLocalStorage ('dataFromForm');
+  console.log('dataFromForm');
+ */
+  fetch ('https://awesome-profile-cards.herokuapp.com/card',
+    {
+      method:'POST',
+      body: JSON.stringify(data),
+      headers:{
+        'Content-Type': 'application/json',
+        },
+    })
+  .then((response) => response.json())
+  .then((responseJson)=> {
+    const responseURL = responseJson.cardURL;
+    if (responseJson.success) {
+      cardLinkElement.innerHTML = responseURL;
+      cardLinkElement.href=responseURL;
+      const twitterHref = `https://twitter.com/intent/tweet?
+      text=Aquí%20esta%20mi%20tarejeta%20de%20visita%20creada%20con%20Awesome%20profile%20cards&url=${responseURL}&hashtags=tarjetadevisita,awesomeprofilecards`;
+      twitterBtn.href = twitterHref;
+
+
+    } else {
+      cardLinkElement.innerHTML = 'Rellena todos los campos';
+    }
+    })
+
+})
+
+
+
+//al cargar la pagina que rescate los datos antes de hacer el fetch
+
+
+//Cuando cargue la página:
+
+/* data = JSON.parse(localStorage.getItem('dataFromForm')); */
+
+/* 
+function updatePreview(){
+  nameInput.value = data.name;
+  careerInput.value = data.job;
+  mailInput.value = data.email;
+  telInput.value = data.phone;
+  linkedinInput.value = data.linkedin;
+  githubInput.value = data.github;
+}
+ */
+/* updatePreview();
+ */
+//boton twitter
+
+//CSS link card
+
 
