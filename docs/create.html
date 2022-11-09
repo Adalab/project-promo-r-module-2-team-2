@@ -34,21 +34,23 @@
 
     <main class="mainCreate">
       <section class="cardDisplay">
-        <button class="cardDisplay__reset">
+        <button class="js-resetBtn cardDisplay__reset">
           <i class="fa-solid fa-trash-can"></i> Reset
         </button>
-        <div class="cardDisplay__card">
-          <div class="titleWrap">
-            <h1 class="js-nameCard cardDisplay__card--name">Nombre Apellido</h1>
+        <div class="js-cardDisplay__card cardDisplay__card">
+          <div class="js-titleWrap titleWrap titleWrapColor">
+            <h1 class="nameCardColor js-nameCard cardDisplay__card--name">
+              Nombre Apellido
+            </h1>
             <h3 class="js-careerCard cardDisplay__card--profesion">
               Front-end developer
             </h3>
           </div>
-          <div class="cardDisplay__card--photo"></div>
+          <div class="js__profile-image cardDisplay__card--photo"></div>
           <ul class="cardDisplay__card--iconList">
             <li class="cardListElement">
               <a
-                class="js-telCard cardListElement__icon telf"
+                class="iconColor js-telCard cardListElement__icon telf"
                 href="tel:example"
                 target="_blank"
               >
@@ -57,7 +59,7 @@
             </li>
             <li class="cardListElement">
               <a
-                class="js-mailCard cardListElement__icon email"
+                class="iconColor js-mailCard cardListElement__icon email"
                 href="mailto:example@gmail.com"
                 target="_blank"
               >
@@ -66,7 +68,7 @@
             </li>
             <li class="cardListElement">
               <a
-                class="js-linkedinCard cardListElement__icon linkedin"
+                class="iconColor js-linkedinCard cardListElement__icon linkedin"
                 href="https://www.linkedin.com"
                 target="_blank"
                 ><i class="fa-brands fa-linkedin-in icon-dots icon"></i
@@ -74,7 +76,7 @@
             </li>
             <li class="cardListElement">
               <a
-                class="js-githubCard cardListElement__icon github"
+                class="iconColor js-githubCard cardListElement__icon github"
                 href="https://github.com/"
                 target="_blank"
                 ><i class="fa-brands fa-github-alt icon-dots icon"></i
@@ -86,33 +88,28 @@
 
       <form class="form" action="" method="post">
         <fieldset class="fieldset">
-          <legend class="containerLegend js-containerLegend">
-            <!-- 
-              Consultar secciones dentro del form:
-              20.10.22 Dayana : recomendación hacer Divs en lugar de sections
-              recomienda tambien hacer partials para cada caja "legend"
-            -->
+          <legend class="js-containerLegend containerLegend">
             <div class="legend__tab">
               <i class="fa-solid fa-object-ungroup legend__tab--icon"></i>
               <h2 class="legend__tab--title">Diseña</h2>
             </div>
 
-            <i class="js-upArrow fa-solid fa-chevron-up legend__tab--arrow"></i>
             <i
-              class="js-downArrow hide fa-solid fa-chevron-down legend__tab--arrow"
+              class="js-upArrowArray js-upArrow fa-solid fa-chevron-up legend__tab--arrow"
             ></i>
           </legend>
 
-          <div class="palettes js-palettes">
+          <div class="js-container palettes js-palettes">
             <label class="palettes__text" for="color">Colores</label>
             <div class="palettes__options">
               <div class="aqua colorContainer">
                 <input
-                  class="inputColor"
+                  class="js-palette1 inputColor"
+                  checked
                   type="radio"
                   id="color1"
                   name="palette"
-                  value="first_checkbox"
+                  value="palette1"
                 />
                 <div class="colorBox aqua-1"></div>
                 <div class="colorBox aqua-2"></div>
@@ -121,11 +118,11 @@
 
               <div class="red colorContainer">
                 <input
-                  class="inputColor"
+                  class="js-palette2 inputColor"
                   type="radio"
                   id="color2"
                   name="palette"
-                  value="second_checkbox"
+                  value="palette2"
                 />
                 <div class="colorBox red-1"></div>
                 <div class="colorBox red-2"></div>
@@ -134,42 +131,32 @@
 
               <div class="blueandbeige colorContainer">
                 <input
-                  class="inputColor"
+                  class="js-palette3 inputColor"
                   type="radio"
                   id="color3"
                   name="palette"
-                  value="third_checkbox"
+                  value="palette3"
                 />
                 <div class="colorBox blueandbeige-1"></div>
                 <div class="colorBox blueandbeige-2"></div>
                 <div class="colorBox blueandbeige-3"></div>
               </div>
-
-              <!--
-                Consulta label (sin mostrar) para usar propiedad aria (facilita discapacidad visual):
-                consultado con Dayana 20.10.22 atributo pendiente de revisar y que nos confirmen.
-                Atributo que solo se aplica en etiqueta label.
-             -->
             </div>
           </div>
         </fieldset>
 
         <fieldset class="js-fieldsetFill fieldset">
-          <legend class="js-containerLegendFill containerLegend">
-            <!-- 
-              Consultar secciones dentro del form:
-              20.10.22 Dayana : recomendación hacer Divs en lugar de sections
-              recomienda tambien hacer partials para cada caja "legend"
-            -->
+          <legend class="js-containerLegend js-containerLegendFill containerLegend">
             <div class="legend__tab">
               <i class="fa-regular fa-keyboard legend__tab--icon"></i>
               <h2 class="legend__tab--title">Rellena</h2>
             </div>
-            <i class="js-downArrow1 fa-solid fa-chevron-down legend__tab--arrow"></i>
-            <i class="js-upArrow1 hide fa-solid fa-chevron-up legend__tab--arrow"></i>
+            <i
+              class="rotate js-upArrowArray js-upArrow1 fa-solid fa-chevron-up legend__tab--arrow"
+            ></i>
           </legend>
 
-          <div class="js-form__contact form__contact hide">
+          <div class="js-container js-form__contact form__contact hide">
             <label class="form__contact--label" for="name">Nombre completo</label>
             <input
               class="js-name form__contact--input"
@@ -185,14 +172,21 @@
               class="js-career form__contact--input"
               type="text"
               id="text"
-              name="text"
+              name="job"
               placeholder="Ej: Front-end unicorn"
               required
             />
             <label class="form__contact--label" for="text">Imagen de perfil</label>
             <div class="form__contact--div">
-              <input class="form__contact--btn" type="submit" value="Añadir imagen" />
-              <div class="form__contact--square"></div>
+              <label class="form__contact--btn" for="photo">Añadir imagen </label>
+              <input
+                class="js__profile-upload-btn hide"
+                type="file"
+                value=""
+                name="photo"
+                id="photo"
+              />
+              <div class="js__profile-preview form__contact--square"></div>
             </div>
 
             <label class="form__contact--label" for="email">Email </label>
@@ -201,7 +195,7 @@
               type="email"
               id="email"
               name="email"
-              placeholder="Ej:linkedin.com/in/sally.hill"
+              placeholder="Ej: sally.hill@gamil.com"
               pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
               required
             />
@@ -211,7 +205,7 @@
               class="js-telInput form__contact--input"
               type="tel"
               id="tel"
-              name="tel"
+              name="phone"
               pattern="^[0-9]{9}$"
               placeholder="Ej: 555-55-55-55"
               required
@@ -222,8 +216,8 @@
               class="js-linkedinInput form__contact--input"
               type="text"
               id="text"
-              name="text"
-              placeholder="Ej: ej:linkedin.com/in/sally.hill"
+              name="linkedin"
+              placeholder="Ej: linkedin.com/in/sally.hill"
               required
             />
 
@@ -232,24 +226,25 @@
               class="js-githubInput form__contact--input"
               type="text"
               id="text"
-              name="text"
-              placeholder="Ej:sally.hill"
+              name="github"
+              placeholder="Ej:github.com/sally.hill"
               required
             />
           </div>
         </fieldset>
 
         <fieldset class="fieldset">
-          <legend class="js-containerLegendShare containerLegend">
+          <legend class="js-containerLegend js-containerLegendShare containerLegend">
             <div class="legend__tab">
               <i class="fa-solid fa-share-nodes legend__tab--icon"></i>
               <h2 class="legend__tab--title">Comparte</h2>
             </div>
-            <i class="js-upArrow2 fa-solid fa-chevron-up legend__tab--arrow hide"></i>
-            <i class="js-downArrow2 fa-solid fa-chevron-down legend__tab--arrow"></i>
+            <i
+              class="rotate js-upArrowArray js-upArrow2 fa-solid fa-chevron-up legend__tab--arrow"
+            ></i>
           </legend>
 
-          <div class="js-containerCreate shareTwitter shareTwitter1 hide">
+          <div class="js-container js-containerCreate shareTwitter shareTwitter1 hide">
             <button
               class="js-btn-create shareTwitter__buttoncreate btnOrange"
               type="button"
@@ -263,11 +258,16 @@
 
           <div class="js-shareTwitter shareTwitter hide shareTwitter2">
             <h4 class="shareTwitter__text">La tarjeta ha sido creada:</h4>
-            <a class="shareTwitter__link" title="Enlace" href="">*aquí iría el link*</a>
             <a
-              class="shareTwitter__buttonshare"
+              class="js-cardLink shareTwitter__link"
+              title="Enlace"
+              href=""
+              target="_blank"
+            ></a>
+            <a
+              class="js-twitterBtn shareTwitter__buttonshare"
               title="Compartir en twitter"
-              href="https://twitter.com/intent/tweet"
+              href=""
               target="_blank"
             >
               <i class="fa-brands fa-twitter shareTwitter__buttonshare--icon"></i>
@@ -279,9 +279,15 @@
       </form>
     </main>
     <footer class="landingFooter">
-        <p class="landingFooter__text">Awesome profile-cards @2022</p>
-        <img class="landingFooter__logo" src="./assets/images/logo-adalab.png" alt="logo de adalab">
+      <p class="landingFooter__text">Awesome profile-cards @2022</p>
+      <a href="https://adalab.es/" title="Adalab" target="_blank"
+        ><img
+          class="landingFooter__logo"
+          src="./assets/images/logo-adalab.png"
+          alt="logo de adalab"
+      /></a>
     </footer>
+
     <script src="./assets/js/main.js"></script>
   </body>
 </html>

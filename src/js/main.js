@@ -247,10 +247,10 @@ btnCreate.addEventListener('click', (event)=> {
       cardLinkElement.innerHTML = responseURL;
       cardLinkElement.href=responseURL;
       const twitterHref = `https://twitter.com/intent/tweet?
-      text=Aquí%20esta%20mi%20tarejeta%20de%20visita%20creada%20con%20Awesome%20profile%20cards&url=${responseURL}&hashtags=tarjetadevisita,awesomeprofilecards`;
+      text=Aquí%20esta%20mi%20tarjeta%20de%20visita%20creada%20con%20Awesome%20profile%20cards&url=${responseURL}&hashtags=tarjetadevisita,awesomeprofilecards`;
       twitterBtn.href = twitterHref;
       } else {
-        cardLinkElement.innerHTML = 'Rellena todos los campos';
+        cardLinkElement.innerHTML = 'https://awesome-profile-cards.herokuapp.com/card/52271667949459438'//'Rellena todos los campos';
       }
     });
   });
