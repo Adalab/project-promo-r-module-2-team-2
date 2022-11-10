@@ -244,7 +244,21 @@ function updatePreview(data){
     paletteOption2.removeAttribute('checked');
     paletteOption3.removeAttribute('checked');
   }
-}}
+} else {
+  data = {
+    palette: '',
+    name: '',
+    job: '',
+    phone: '',
+    email: '',
+    linkedin: '',
+    github: '',
+    photo: '',
+  };
+
+}
+
+}
 
 
 
