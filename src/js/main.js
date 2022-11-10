@@ -89,7 +89,7 @@ function colapse(event) {
 
 function toggleLegend() {
   for (let i = 0; i < legendElement.length; i++) {
-    legendElement[i].addEventListener("click", colapse);
+    legendElement[i].addEventListener('click', colapse);
     }
   }
 toggleLegend();
@@ -158,8 +158,6 @@ containerDesign.addEventListener('input', (event) => {
   event.preventDefault();
   dataCollect();
 });
-
-
 
 
 
