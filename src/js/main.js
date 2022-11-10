@@ -126,7 +126,7 @@ function dataCollect() {
   data[inputTarget.name] = inputTargetValue;
   //si no se elige paleta, se selecciona la predefinida
   if (data.palette === '') {
-    data.palette = 'palette1';
+    data.palette = 1;
     }
   }
 
@@ -227,7 +227,7 @@ const changePalette = (event) => {
   cardDisplayContainer.classList.remove ('palette1');
   cardDisplayContainer.classList.remove ('palette2');
   cardDisplayContainer.classList.remove ('palette3');
-  cardDisplayContainer.classList.add(event.currentTarget.value);
+  cardDisplayContainer.classList.add(`palette${event.currentTarget.value}`);
   };
 
 paletteOption1.addEventListener ('click', changePalette);
@@ -263,11 +263,12 @@ btnCreate.addEventListener('click', (event)=> {
     if (responseJson.success) {
       cardLinkElement.innerHTML = responseURL;
       cardLinkElement.href=responseURL;
-      const twitterHref = `https://twitter.com/intent/tweet?
-      text=Aquí%20esta%20mi%20tarjeta%20de%20visita%20creada%20con%20Awesome%20profile%20cards&url=${responseURL}&hashtags=tarjetadevisita,awesomeprofilecards`;
+      const messageTwitter = 'Aquí%20esta%20mi%20tarjeta%20de%20visita%20creada%20con%20Awesome%20profile%20cards';
+      const twitterHref = `https://twitter.com/intent/tweet?text=${messageTwitter}&url=${responseURL}&hashtags=businesscard,awesomeprofilecards`;
       twitterBtn.href = twitterHref;
       } else {
-        cardLinkElement.innerHTML = 'https://awesome-profile-cards.herokuapp.com/card/52271667949459438'//'Rellena todos los campos';
+        cardLinkElement.innerHTML = 'Rellena todos los campos';
+        twitterBtn.href = '';
       }
     });
   });
