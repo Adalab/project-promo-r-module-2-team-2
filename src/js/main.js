@@ -164,6 +164,22 @@ fieldsetFill.addEventListener('input', (event) => {
   event.preventDefault();
   dataCollect();
   renderCard();
+
+ 
+
+/*   saveLocalStorage ('dataFromForm') */
+
+
+/*   localStorage.setItem('dataFromForm', JSON.stringify(data));
+  saveLocalStorage ('dataFromForm');
+  console.log('dataFromForm');
+
+ data = JSON.parse(localStorage.getItem('dataFromForm')); *
+
+
+
+
+
   //updatePreview();
 /*   saveLocalStorage(data); */
 });
@@ -220,11 +236,6 @@ paletteOption3.addEventListener ('click', changePalette);
 
 
 
-/*   localStorage.setItem('dataFromForm', JSON.stringify(data));
-  saveLocalStorage ('dataFromForm');
-  console.log('dataFromForm');
- */
-
 
 
 //Crear tarjeta
@@ -232,10 +243,16 @@ paletteOption3.addEventListener ('click', changePalette);
 btnCreate.addEventListener('click', (event)=> {
   event.preventDefault();
   //enviar datos a API
+  console.log(data);
+  const datastring = JSON.stringify(data);
+  console.log(datastring);
+  localStorage.setItem('dataFromForm', datastring);
+
+ /*  localStorage.setItem('dataFromForm', JSON.stringify(data)); */
   fetch ('https://awesome-profile-cards.herokuapp.com/card',
     {
       method:'POST',
-      body: JSON.stringify(data),
+      body: datastring,
       headers:{
         'Content-Type': 'application/json',
         },
@@ -262,7 +279,7 @@ btnCreate.addEventListener('click', (event)=> {
 
 //Cuando cargue la página:
 
-/* data = JSON.parse(localStorage.getItem('dataFromForm')); */
+
 
 /*
 function updatePreview(){
