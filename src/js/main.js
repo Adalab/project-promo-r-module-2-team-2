@@ -108,14 +108,14 @@ btnCreate.addEventListener('click', (event) => {
 // VOLCADO DE DATOS A LA TARJETA
 
 let data = {
-  palette: "",
-  name: "",
-  job: "",
-  phone: "",
-  email: "",
-  linkedin: "",
-  github: "",
-  photo: "",
+  palette: '',
+  name: '',
+  job: '',
+  phone: '',
+  email: '',
+  linkedin: '',
+  github: '',
+  photo: '',
 };
 
 
@@ -138,25 +138,13 @@ function renderCard() {
   mailCard.href = data.email;
   linkedinCard.href = data.linkedin;
   githubCard.href = data.github;
-  if (data.name === "") {
-    nameCardInput.innerHTML = "Nombre Apellido";
+  if (data.name === '') {
+    nameCardInput.innerHTML = 'Nombre Apellido';
   }
-  if (data.job === "") {
-    careerCardInput.innerHTML = "Front-end developer";
+  if (data.job === '') {
+    careerCardInput.innerHTML = 'Front-end developer';
   }
 }
-
-//guardar los datos en local para cuando se cargue la pagina
-
-/* function saveLocalStorage(data){
-  localStorage.setItem('dataFromForm', JSON.stringify(data));
-}
-
-data=localStorage.getItem('dataFromForm');
- */
-/* updatePreview();
-nameInput.value = data.name;
-jobInput.value = data.job; */
 
 
 //recoger info de los inputs
@@ -164,24 +152,6 @@ fieldsetFill.addEventListener('input', (event) => {
   event.preventDefault();
   dataCollect();
   renderCard();
-
- 
-
-/*   saveLocalStorage ('dataFromForm') */
-
-
-/*   localStorage.setItem('dataFromForm', JSON.stringify(data));
-  saveLocalStorage ('dataFromForm');
-  console.log('dataFromForm');
-
- data = JSON.parse(localStorage.getItem('dataFromForm')); *
-
-
-
-
-
-  //updatePreview();
-/*   saveLocalStorage(data); */
 });
 
 containerDesign.addEventListener('input', (event) => {
@@ -190,36 +160,7 @@ containerDesign.addEventListener('input', (event) => {
 });
 
 
-// Boton reset
 
-function handleReset(event) {
-  event.preventDefault();
-
-  //vaciar el objeto pte renderizar recorrer el array del objeto data
-  data.palette = '';
-  data.name= '';
-  data.job= '';
-  data.phone= '';
-  data.email= '';
-  data.linkedin= '';
-  data.github= '';
-  data.photo= '';
-
-  nameInput.value = '';
-  careerInput.value = '';
-  mailInput.value = '';
-  telInput.value = '';
-  linkedinInput.value = '';
-  githubInput.value = '';
-  nameCardInput.innerHTML = 'Nombre Apellido';
-  careerCardInput.innerHTML = 'Front-end developer';
-  telCard.href = 'tel:example';
-  mailCard.href = 'mailto:example@gmail.com';
-  linkedinCard.href = 'https://www.linkedin.com';
-  githubCard.href = 'https://github.com/';
-}
-
-resetBtnElement.addEventListener('click', handleReset);
 
 
 //PALETAS - volcado
@@ -235,20 +176,18 @@ paletteOption2.addEventListener ('click', changePalette);
 paletteOption3.addEventListener ('click', changePalette); 
 
 
-
+updatePreview(data);
 
 
 //Crear tarjeta
 
 btnCreate.addEventListener('click', (event)=> {
   event.preventDefault();
+  // guardar datos en local
+  localStorage.setItem('dataFromForm', JSON.stringify(data));
   //enviar datos a API
-  console.log(data);
   const datastring = JSON.stringify(data);
-  console.log(datastring);
   localStorage.setItem('dataFromForm', datastring);
-
- /*  localStorage.setItem('dataFromForm', JSON.stringify(data)); */
   fetch ('https://awesome-profile-cards.herokuapp.com/card',
     {
       method:'POST',
@@ -275,15 +214,10 @@ btnCreate.addEventListener('click', (event)=> {
 
 
 
-//al cargar la pagina que rescate los datos antes de hacer el fetch
-
-
 //Cuando cargue la página:
 
-
-
-/*
-function updatePreview(){
+function updatePreview(data){
+  data=JSON.parse(localStorage.getItem('dataFromForm'));
   nameInput.value = data.name;
   careerInput.value = data.job;
   mailInput.value = data.email;
@@ -291,11 +225,41 @@ function updatePreview(){
   linkedinInput.value = data.linkedin;
   githubInput.value = data.github;
 }
- */
-/* updatePreview();
- */
-//boton twitter
-
-//CSS link card
 
 
+updatePreview(data);
+console.log(data);
+
+// Boton reset
+
+function handleReset(event) {
+  event.preventDefault();
+
+  //vaciar el objeto pte renderizar recorrer el array del objeto data
+  data = {
+    palette: '',
+    name: '',
+    job: '',
+    phone: '',
+    email: '',
+    linkedin: '',
+    github: '',
+    photo: '',
+  };
+  // guardar datos en local
+  localStorage.setItem('dataFromForm', JSON.stringify(data));
+  nameInput.value = '';
+  careerInput.value = '';
+  mailInput.value = '';
+  telInput.value = '';
+  linkedinInput.value = '';
+  githubInput.value = '';
+  nameCardInput.innerHTML = 'Nombre Apellido';
+  careerCardInput.innerHTML = 'Front-end developer';
+  telCard.href = 'tel:example';
+  mailCard.href = 'mailto:example@gmail.com';
+  linkedinCard.href = 'https://www.linkedin.com';
+  githubCard.href = 'https://github.com/';
+}
+
+resetBtnElement.addEventListener('click', handleReset);
