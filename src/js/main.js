@@ -215,7 +215,9 @@ btnCreate.addEventListener('click', (event)=> {
 //Cuando cargue la página:
 
 function updatePreview(data){
+ 
   data=JSON.parse(localStorage.getItem('dataFromForm'));
+  if (data !== null) {
   nameInput.value = data.name;
   careerInput.value = data.job;
   mailInput.value = data.email;
@@ -242,10 +244,9 @@ function updatePreview(data){
     paletteOption2.removeAttribute('checked');
     paletteOption3.removeAttribute('checked');
   }
-}
+}}
 
 
-updatePreview(data);
 
 // Boton reset
 
