@@ -224,11 +224,30 @@ function updatePreview(data){
   telInput.value = data.phone;
   linkedinInput.value = data.linkedin;
   githubInput.value = data.github;
+
+  cardDisplayContainer.classList.remove ('palette1','palette2','palette3');
+  cardDisplayContainer.classList.add(`palette${data.palette}`);
+
+  switch (data.palette){
+    case '3':
+      paletteOption1.removeAttribute('checked');
+      paletteOption2.removeAttribute('checked');
+      paletteOption3.setAttribute('checked','checked');
+      break;
+    case '2':
+      paletteOption2.setAttribute('checked','checked');
+      paletteOption1.removeAttribute('checked');
+      paletteOption3.removeAttribute('checked');
+      break;
+    default:
+    paletteOption1.setAttribute('checked','checked');
+    paletteOption2.removeAttribute('checked');
+    paletteOption3.removeAttribute('checked');
+  }
 }
 
 
 updatePreview(data);
-console.log(data);
 
 // Boton reset
 
@@ -246,7 +265,8 @@ function handleReset(event) {
     github: '',
     photo: '',
   };
-  // guardar datos en local
+
+  // Vaciar, sobresescribir datos en local
   localStorage.setItem('dataFromForm', JSON.stringify(data));
   nameInput.value = '';
   careerInput.value = '';
