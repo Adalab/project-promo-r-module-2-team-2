@@ -224,6 +224,12 @@ function updatePreview(data){
   telInput.value = data.phone;
   linkedinInput.value = data.linkedin;
   githubInput.value = data.github;
+  nameCardInput.innerHTML = data.name;
+  careerCardInput.innerHTML = data.job;
+  telCard.href = data.phone;
+  mailCard.href = data.email;
+  linkedinCard.href = data.linkedin;
+  githubCard.href = data.github;
 
   cardDisplayContainer.classList.remove ('palette1','palette2','palette3');
   cardDisplayContainer.classList.add(`palette${data.palette}`);
