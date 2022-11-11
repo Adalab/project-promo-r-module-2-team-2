@@ -200,7 +200,7 @@ btnCreate.addEventListener('click', (event)=> {
     if (responseJson.success) {
       cardLinkElement.innerHTML = responseURL;
       cardLinkElement.href=responseURL;
-      const messageTwitter = 'Aquí%20esta%20mi%20tarjeta%20de%20visita%20creada%20con%20Awesome%20profile%20cards';
+      const messageTwitter = 'Aquí%20está%20mi%20tarjeta%20de%20visita%20creada%20con%20Awesome%20profile%20cards';
       const twitterHref = `https://twitter.com/intent/tweet?text=${messageTwitter}&url=${responseURL}&hashtags=businesscard,awesomeprofilecards`;
       twitterBtn.href = twitterHref;
       } else {
