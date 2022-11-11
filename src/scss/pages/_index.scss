@@ -67,6 +67,7 @@ flex-direction: column;
     border-radius: 4px;
     @media all and (min-width: 768px) {
       margin-top: 27px;
+  
       width: 325px;
       height: 86px;
       gap: 35px;
@@ -103,7 +104,9 @@ flex-direction: column;
   justify-content: center;
   align-items: center;
   @media all and (min-width: 768px) {
-    margin-top: 186px;
+  margin-top: 186px;
+    width: 129px;
+    height: 42px;
   }
 
   &__link {
@@ -113,5 +116,7 @@ flex-direction: column;
     font-weight: 600;
     text-transform: uppercase;
     color: $colorWhite;
+    width: 129px;
+    height: 42px
   } 
 }
