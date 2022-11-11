@@ -287,7 +287,8 @@ function handleReset(event) {
   };
 
   // Vaciar, sobresescribir datos en local
-  localStorage.setItem('dataFromForm', JSON.stringify(data));
+  localStorage.removeItem('dataFromForm');
+  /* data= localStorage.setItem('dataFromForm', JSON.stringify(data)); */
   nameInput.value = '';
   careerInput.value = '';
   mailInput.value = '';
