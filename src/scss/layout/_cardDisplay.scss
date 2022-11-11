@@ -31,6 +31,7 @@
         justify-content: center;
         gap:8px;
         color:$colorGreyText;
+        cursor: pointer;
         }
     &__card {
         background-color:$colorWhite;
@@ -46,11 +47,13 @@
             @include t(rem(18),rem(20));
             font-family:$font-familySecondary;
             font-weight: 700;
+            cursor: default;
                  }
         &--profesion {
                 color: $colorGreyText;
                 @include t(rem(16),rem(20));
                 font-family:$font-familySecondary;
+                cursor: default;
                 }
         &--photo {
             width: 240px;

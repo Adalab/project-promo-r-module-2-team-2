@@ -206,6 +206,7 @@ btnCreate.addEventListener('click', (event)=> {
       } else {
         cardLinkElement.innerHTML = 'Rellena todos los campos';
         twitterBtn.href = '';
+        cardLinkElement.title = '';
       }
     });
   });
