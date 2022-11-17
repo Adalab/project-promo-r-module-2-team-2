@@ -121,6 +121,8 @@ let data = {
 
 //meter valores al objeto
 function dataCollect() {
+
+
   const inputTarget = event.target;
   let inputTargetValue = inputTarget.value;
   data[inputTarget.name] = inputTargetValue;
@@ -128,6 +130,9 @@ function dataCollect() {
   if (data.palette === '') {
     data.palette = 1;
     }
+/*   const dataStorage=JSON.parse(localStorage.getItem('dataFromForm')); */
+
+ /*  if (data.name===''){data.name=dataStorage.name;} */
   }
 
 //función pintar
@@ -150,6 +155,8 @@ function renderCard() {
 //recoger info de los inputs
 fieldsetFill.addEventListener('input', (event) => {
   event.preventDefault();
+  const dataStorage =JSON.parse(localStorage.getItem('dataFromForm'));
+  if(dataStorage!== null){data=dataStorage;}
   dataCollect();
   renderCard();
 });
@@ -181,11 +188,32 @@ updatePreview(data);
 
 btnCreate.addEventListener('click', (event)=> {
   event.preventDefault();
-  // guardar datos en local
-  localStorage.setItem('dataFromForm', JSON.stringify(data));
-  //enviar datos a API
+  
+/* 
+  const dataStorage=JSON.parse(localStorage.getItem('dataFromForm'));
+  if (dataStorage !== null) {
+    dataStorage.name = data.name;
+    dataStorage.job= data.job;
+    dataStorage.email = data.email;
+    dataStorage.phone = data.phone;
+    dataStorage.linkedin = data.linkedin;
+    dataStorage.github = data.github;}
+   */
+  
+  
+  
   const datastring = JSON.stringify(data);
+  
+  
+/*   if (data !== null) { */
+  
   localStorage.setItem('dataFromForm', datastring);
+
+
+
+
+
+
   fetch ('https://awesome-profile-cards.herokuapp.com/card',
     {
       method:'POST',
@@ -200,8 +228,8 @@ btnCreate.addEventListener('click', (event)=> {
     if (responseJson.success) {
       cardLinkElement.innerHTML = responseURL;
       cardLinkElement.href=responseURL;
-      const messageTwitter = 'Aquí%20está%20mi%20tarjeta%20de%20visita%20creada%20con%20Awesome%20profile%20cards';
-      const twitterHref = `https://twitter.com/intent/tweet?text=${messageTwitter}&url=${responseURL}&hashtags=businesscard,awesomeprofilecards`;
+      const messageTwitter = 'Aquí%20está%20mi%20tarjeta%20de%20visita%20creada%20con%20AdaCards';
+      const twitterHref = `https://twitter.com/intent/tweet?text=${messageTwitter}&url=${responseURL}&hashtags=businesscard,adacards`;
       twitterBtn.href = twitterHref;
       } else {
         cardLinkElement.innerHTML = 'Rellena todos los campos';
@@ -231,6 +259,7 @@ function updatePreview(data){
   mailCard.href = data.email;
   linkedinCard.href = data.linkedin;
   githubCard.href = data.github;
+
 
   cardDisplayContainer.classList.remove ('palette1','palette2','palette3');
   cardDisplayContainer.classList.add(`palette${data.palette}`);

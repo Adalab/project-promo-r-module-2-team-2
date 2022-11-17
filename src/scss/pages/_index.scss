@@ -20,10 +20,12 @@ flex-direction: column;
 
 .landingLogo {
   width: 250px;
-  height: 63px;
+  height: auto;
+/*   width: 250px;
+  height: 63px; */
   @media all and (min-width: 768px) {
-    width: 419px;
-    height: 105px;
+/*     width: 419px;
+    height: 105px; */
   }
 }
 
@@ -98,7 +100,7 @@ flex-direction: column;
   margin-top: 40px;
   width: 129px;
   height: 42px;
-  background-color: #438792;
+  background-color: $colorSecondary;
   border-radius: 21px;
   display: flex;
   justify-content: center;

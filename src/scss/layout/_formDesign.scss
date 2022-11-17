@@ -17,6 +17,7 @@
     .inputColor {
         margin-right: 20px; 
         cursor: pointer;
+
     }
 
     .colorBox {
@@ -36,4 +37,29 @@
     .blueandbeige-2{background-color: $colorBeige;}
     .blueandbeige-3{background-color: $colorLightBlueGrey;}
 }
-
+input[type='radio']:after {
+    width: 5px;
+    height: 5px;
+    border-radius: 15px;
+    top: 5px;
+    left: 1px;
+    position: relative;
+    background-color:white;
+    content: '';
+    display: inline-block;
+    visibility: visible;
+    border: 2px solid white;
+}
+input[type='radio']:checked:after {
+    width: 14px;
+    height: 14px;
+    border-radius: 15px;
+    top: 5px;
+    left: -2px;
+    position: relative;
+    background-color:$colorSecondary;
+    content: '';
+    display: inline-block;
+    visibility: visible;
+    border: 2px solid white;
+}

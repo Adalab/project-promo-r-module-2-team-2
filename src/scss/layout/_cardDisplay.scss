@@ -21,16 +21,17 @@
         width: 75px;
         height: 30px;
         margin-bottom: 20px;
-        border:solid 1px $colorWhite;
+        border:solid 2px $colorIcons;
         border-radius: 15px;
         font-family: $font-familyPrimary;
         @include t(rem(12), rem(20));
+        font-weight: 600;
         text-transform: uppercase;
         display:flex;
         align-items: center;
         justify-content: center;
         gap:8px;
-        color:$colorGreyText;
+        color:$colorIcons;
         cursor: pointer;
         }
     &__card {

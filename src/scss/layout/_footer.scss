@@ -17,15 +17,16 @@
 
   &__text {
     @include t(rem(14), rem(20));
-    color: #6b6b6b;
-    opacity: 0.5;
+    text-decoration: none;
+    color: $colorSecondary;
+    opacity: 0.8;
     @media all and (min-width: 768px) {
     }
   }
 
   &__logo {
     width: 103px;
-    height: 40px;
+    height: auto;
     margin-top:12px;
     @media all and (min-width: 768px) {
       margin-top:0;
